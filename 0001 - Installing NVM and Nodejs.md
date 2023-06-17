@@ -1,4 +1,9 @@
 ## Installing NVM
+- Run this command if you don't have `wget` installed on your PC
+```bash
+sudo apt-get install wget
+```
+
 - Start by running this command
 ```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
