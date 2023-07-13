@@ -1,0 +1,22 @@
+/* (bnierimi@tcitrogg): trse */
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/font/sf-pro-display/SFPRODISPLAYBOLD.OTF");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/font/sf-pro-display/SFPRODISPLAYMEDIUM.OTF");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/font/sf-pro-display/SFPRODISPLAYREGULAR.OTF");
+  font-weight: normal;
+}
+
+* {
+  font-family: "SF Pro Display";
+  font-style: normal;
+}
