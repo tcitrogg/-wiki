@@ -4,13 +4,14 @@
   import Yuzaname from "$lib/Trogg/Yuzaname.svelte";
   import SvelteMarkdown from 'svelte-markdown'
 
-  import { yonko } from "../../stores";
+  // import { yonko } from "../../../.store/stores";
   import { onMount } from "svelte";
 
   let isReady = false;
 	onMount(() => isReady = true);
 
   export let data;
+  const yonko = "bnierimi"
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70"
 </script>
 

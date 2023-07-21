@@ -5,9 +5,9 @@
 </script>
 
 <main class="w-full h-full">
-  <section class="w-full h-full md:hidden block">
+  <!-- <section class="w-full h-full md:hidden block">
     <Aside/>
-  </section>
+  </section> -->
   <section class="w-full h-full hidden md:flex flex-col items-center justify-center space-y-2">
     <Mklogo title={"Wk"}/>
     <h2 class="font-medium text-xl">

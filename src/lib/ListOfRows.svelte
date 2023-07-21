@@ -10,21 +10,22 @@
   // export let listOfWknotes: object[] = []
   // console.log("from ListOfRows", listOfWknotes)
 
-  import { wknotes } from "../stores";
+  // import { wknotes } from "../stores";
 
-  let listOfWknotes: object[] = [];
-  wknotes.subscribe((value)=>{
-    listOfWknotes = value
-  })
+  export let listOfWknotes: any;
+  listOfWknotes = listOfWknotes.listOfWknotes;
+  // wknotes.subscribe((value)=>{
+  //   listOfWknotes = value
+  // })
   // console.log(listOfWknotes)
 
 </script>
 
 {#if !(listOfWknotes.length === 0)}
   <ul class="w-full flex flex-col space-y-1">
-    {#each listOfWknotes as eachWknote}
+    {#each listOfWknotes as eachWknote, id}
       <li class="w-full ">
-        <Row title={eachWknote.title} id={`${eachWknote.id}`}/>
+        <Row title={eachWknote} id={`${id}`}/>
       </li>
     {/each}
   </ul>
