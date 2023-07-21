@@ -3,7 +3,7 @@
 ```bash
 sudo apt-get install wget
 ```
-
+()[https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh]
 - Start by running this command
 ```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash

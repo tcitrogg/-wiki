@@ -1,68 +1,58 @@
 <script lang="ts">
-  import { goto, afterNavigate } from "$app/navigation"
-  import { base } from "$app/paths";
-  import Mklogo from "$lib/Trogg/Mklogo.svelte";
+	import { fly, fade, scale, slide } from 'svelte/transition';
+	import { flip } from "svelte/animate";
   import Yuzaname from "$lib/Trogg/Yuzaname.svelte";
-
   import SvelteMarkdown from 'svelte-markdown'
 
-  let previousPage: string = base;
+  import { yonko } from "../../stores";
+  import { onMount } from "svelte";
 
-  afterNavigate(({from})=>{
-    previousPage = from?.url.pathname || previousPage
-  })
+  let isReady = false;
+	onMount(() => isReady = true);
 
-  // to go back
-  // goto(previousPage)
-
-
-  const source = `
-  # This is a header
-
-This is a paragraph.
-
-* This is a list
-* With two items
-  1. And a sublist
-  2. That is ordered
-    * With another
-    * Sublist inside
-
-| And this is | A table |
-|-------------|---------|
-| With two    | columns |`
-
-  const focusStyle = "focus:outline-none focus:ring-1 focus:ring-emerald-500/70"
+  export let data;
+  const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70"
 </script>
 
 <!-- <section class="p-1"></section> -->
-<main class="w-full h-full flex flex-col p-4 rounded-md">
-  <div class="w-full lg:w-10/12 lg:mx-auto h-full space-y-4">
-    <div class="space-y-2">
-      <h2 class="font-medium text-2xl">Title</h2>
-      <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-2">
-          <span class="opacity-50 italic">by</span>
-          <div class="rounded-full py-0.5 px-2 bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700 flex items-center justify-center">
-            <Yuzaname name="Shanks"/>
+<!-- {#if isReady}
+{/if} -->
+  <main transition:slide="{{ duration: 600 }}" class="w-full h-full p4 rounded-md overflow-y-auto relative">
+    <h2 class="w-full lg:w-10/12 lg:mx-auto font-medium text-lg px-4 py-3 sticky top-0 z-40 bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-800">
+      <span class="text-blue-600">wiki</span>
+      <span class="opacity-50">/</span>
+      <span>{data.each_wknote.title}</span>
+      <!-- <span>{data.each_wknote.title} - {"{data.each_wknote.cryptId}"}</span> -->
+    </h2>
+    <div class="w-full lg:w-10/12 lg:mx-auto h-full flex flex-col space-y-4">
+      <div class="space-y-2">
+  
+        <div class="flex items-center justify-between text-sm px-4 py-0.5">
+          <div class="flex items-center space-x-2">
+            <span class="opacity-50 italic">from</span>
+            <div class="rounded-full py-0.5 px-2 bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700 flex items-center justify-center">
+              <Yuzaname name={yonko}/>
+            </div>
+          </div>
+    
+          <div class="flex items-center space-x-2">
+    
+            <button class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
+              <i class="icon icon-ic_fluent_chat_20_regular flex text-xl"></i>
+            </button>
+      
+            <button class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
+              <i class="icon icon-ic_fluent_share_ios_20_regular flex text-xl"></i>
+            </button>
           </div>
         </div>
+      </div>
+      <hr class="border-zinc-300/50 dark:border-zinc-700/50">
+      <div class="w-full h-full px-4 prose prose-headings:text-zinc-700 prose-headings:dark:text-zinc-200 prose-a:text-zinc-700 prose-a:dark:text-zinc-200 prose-pre:bg-zinc-200 dark:prose-pre:bg-zinc-800 md:prose-pre:bg-zinc-300 md:dark:prose-pre:bg-zinc-900 prose-code:text-zinc-700 prose-code:dark:text-zinc-200 text-zinc-700 dark:text-zinc-200">
+        <SvelteMarkdown source={data.each_wknote.content} />
+        <!-- {data.each_wknote.content} -->
   
-        <div class="flex items-center space-x-2">
-  
-          <button class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
-            <i class="icon icon-ic_fluent_chat_20_regular flex text-xl"></i>
-          </button>
-    
-          <button class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
-            <i class="icon icon-ic_fluent_share_ios_20_regular flex text-xl"></i>
-          </button>
-        </div>
+        <!-- <div>{@html data.response}</div> -->
       </div>
     </div>
-    <hr class="border-zinc-300/50 dark:border-zinc-700/50">
-    <div class="overflow-y-auto prose">
-      <SvelteMarkdown {source} />
-    </div>
-  </div>
-</main>
+  </main>

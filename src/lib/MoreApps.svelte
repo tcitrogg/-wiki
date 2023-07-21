@@ -1,8 +1,8 @@
 <script lang="ts">
     import Tooltip from "./Tooltip.svelte";
 
-  const focusStyle = "focus:outline-none focus:ring-1 focus:ring-emerald-500/70"
-  const focusWithinStyle = "focus-within:outline-none focus-within:ring-1 focus-within:ring-emerald-500/70"
+  const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70"
+  const focusWithinStyle = "focus-within:outline-none focus-within:ring-1 focus-within:ring-blue-600/70"
   const noFocusStyle = "focus:outline-none focus:ring-0"
 
   const moreApps = [

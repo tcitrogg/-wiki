@@ -3,13 +3,13 @@
   import Troggapp from "$lib/Trogg/Troggapp.svelte";
   import ThemeBtn from "$lib/ThemeBtn.svelte";
 
-  const focusStyle = "focus:outline-none focus:ring-1 focus:ring-emerald-500/70"
-  const focusWithinStyle = "focus-within:outline-none focus-within:ring-1 focus-within:ring-emerald-500/70"
+  const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70"
+  const focusWithinStyle = "focus-within:outline-none focus-within:ring-1 focus-within:ring-blue-600/70"
   const noFocusStyle = "focus:outline-none focus:ring-0"
 </script>
 
 <aside
-  class="w-full xl:w-3/12 lg:w-4/12 md:w-4/12 h-full hidden md:block flex-col space-y-4 py-4 px-2"
+  class="w-full h-full flex-col space-y-4 py-4 px-2"
 >
   <div class="w-full bg-rose- flex items-center justify-between px-4">
     <h1 class="font-medium text-xl">
@@ -25,5 +25,5 @@
       </button>
     </div>
   </div>
-  <ListOfRows />
+  <ListOfRows/>
 </aside>
