@@ -1,13 +1,15 @@
 <script lang="ts">
-  import Aside from "$lib/Aside.svelte";
-  import Mklogo from "$lib/Trogg/Mklogo.svelte";
-  import Troggapp from "$lib/Trogg/Troggapp.svelte";
+  import Aside from "$lib/components/Aside.svelte";
+  import Mklogo from "$lib/components/Trogg/Mklogo.svelte";
+  import Troggapp from "$lib/components/Trogg/Troggapp.svelte";
+
+  export let data;
 </script>
 
 <main class="w-full h-full">
-  <!-- <section class="w-full h-full md:hidden block">
-    <Aside/>
-  </section> -->
+  <section class="w-full h-full md:hidden block">
+    <Aside listOfPosts={data}/>
+  </section>
   <section class="w-full h-full hidden md:flex flex-col items-center justify-center space-y-2">
     <Mklogo title={"Wk"}/>
     <h2 class="font-medium text-xl">

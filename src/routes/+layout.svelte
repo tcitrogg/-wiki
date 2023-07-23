@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Aside from "$lib/Aside.svelte";
+  import Aside from "$lib/components/Aside.svelte";
   import "../app.css"
 
   export let data;
@@ -10,7 +10,7 @@
   <div class="lg:container lg:mx-auto h-full flex">
 
     <section class="w-full xl:w-3/12 lg:w-4/12 md:w-4/12 h-full md:block hidden">
-      <Aside listOfWknotes={data}/>
+      <Aside listOfPosts={data.posts}/>
     </section>
     <section class="w-full xl:w-9/12 lg:w-8/12 md:w-8/12 h-full md:p-1">
 

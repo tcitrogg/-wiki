@@ -1,11 +1,9 @@
 <script lang="ts">
-  import ListOfRows from "$lib/ListOfRows.svelte";
-  import Troggapp from "$lib/Trogg/Troggapp.svelte";
-  import ThemeBtn from "$lib/ThemeBtn.svelte";
+  import ListOfRows from "./ListOfRows.svelte";
+  import Troggapp from "./Trogg/Troggapp.svelte";
+  import ThemeBtn from "./ThemeBtn.svelte";
 
-  export let listOfWknotes: object[];
-  console.log("Aside", listOfWknotes)
-
+  export let listOfPosts: any;
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70"
   const focusWithinStyle = "focus-within:outline-none focus-within:ring-1 focus-within:ring-blue-600/70"
   const noFocusStyle = "focus:outline-none focus:ring-0"
@@ -28,5 +26,5 @@
       </button>
     </div>
   </div>
-  <ListOfRows {listOfWknotes}/>
+  <ListOfRows {listOfPosts}/>
 </aside>

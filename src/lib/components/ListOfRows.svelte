@@ -2,30 +2,24 @@
   import Row from "./Row.svelte";
   
 
-  // const listOfWknotes: any[] = [
+  // const listOfPosts: any[] = [
   //   "README", "Installing NVM and Nodejs", "Downloading a website with wget", "Calculate your CGPA with t/Akada", "Fluent system icons", "Tailwind",
   //   "Advanced routing", "Pathless layout routes", "Chapel of the light"
   // ]
 
-  // export let listOfWknotes: object[] = []
-  // console.log("from ListOfRows", listOfWknotes)
+  // export let listOfPosts: object[] = []
+  // console.log("from ListOfRows", listOfPosts)
 
-  // import { wknotes } from "../stores";
+  // import { posts } from "../stores";
 
-  export let listOfWknotes: any;
-  listOfWknotes = listOfWknotes.listOfWknotes;
-  // wknotes.subscribe((value)=>{
-  //   listOfWknotes = value
-  // })
-  // console.log(listOfWknotes)
-
+  export let listOfPosts: any;
 </script>
 
-{#if !(listOfWknotes.length === 0)}
+{#if !(listOfPosts.length === 0)}
   <ul class="w-full flex flex-col space-y-1">
-    {#each listOfWknotes as eachWknote, id}
+    {#each listOfPosts as eachPost}
       <li class="w-full ">
-        <Row title={eachWknote} id={`${id}`}/>
+        <Row title={eachPost.post} id={`${eachPost.id}`}/>
       </li>
     {/each}
   </ul>
