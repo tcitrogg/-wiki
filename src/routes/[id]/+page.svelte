@@ -2,6 +2,7 @@
 	import { fly, fade, scale, slide } from 'svelte/transition';
 	import { flip } from "svelte/animate";
   import Yuzaname from "$lib/components/Trogg/Yuzaname.svelte";
+  import CopyBtn from "$lib/components/CopyBtn.svelte";
   import SvelteMarkdown from 'svelte-markdown'
   import { onMount } from "svelte";
 
@@ -12,8 +13,11 @@
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70"
 
 	import { formatDate } from '$lib/utils'
+	import { url } from '$lib/config'
 
 	export let data
+  // console.log(data)
+  
 </script>
 
 <!-- <section class="p-1"></section> -->
@@ -47,9 +51,7 @@
               <i class="icon icon-ic_fluent_chat_20_regular flex text-xl"></i>
             </button>
       
-            <button class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
-              <i class="icon icon-ic_fluent_share_ios_20_regular flex text-xl"></i>
-            </button>
+            <CopyBtn link={`${url}`}/>
           </div>
         </div>
       </div>

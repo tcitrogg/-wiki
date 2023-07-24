@@ -17,7 +17,7 @@ async function getPosts() {
 	for (const path in paths) {
 		const file = paths[path]
 		const id = `${path.split('/').at(-1)?.replace('.md', '')}` // converted the `undefined` to a string
-    const fileId = id.replaceAll(" ", "-")
+    const fileId = id.replaceAll(" ", "-").toLowerCase()
 
 		if (file && typeof file === 'object' && 'metadata' in file && id) {
 			const metadata = file.metadata as Omit<Post, 'id'>
