@@ -1,4 +1,5 @@
 <script lang="ts">
+    import type { Post } from "$lib/types";
   import Row from "./Row.svelte";
   
 
@@ -12,14 +13,16 @@
 
   // import { posts } from "../stores";
 
-  export let listOfPosts: any;
+  export let data: Post[];
+  data = data.posts
 </script>
 
-{#if !(listOfPosts.length === 0)}
-  <ul class="w-full flex flex-col space-y-1">
-    {#each listOfPosts as eachPost}
+{#if !(data.length === 0)}
+  <ul class="w-full h-full flex flex-col space-y-1 overflow-y-auto">
+    {#each data as eachPost}
       <li class="w-full ">
-        <Row title={eachPost.post} id={`${eachPost.id}`}/>
+        <Row title={eachPost.title} id={`${eachPost.nanid}`}/>
+        <!-- {eachPost.nanid} -->
       </li>
     {/each}
   </ul>

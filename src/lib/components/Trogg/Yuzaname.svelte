@@ -7,9 +7,9 @@
   const noFocusStyle = "focus:outline-none focus:ring-0"
 </script>
 
-<a href={`tcitrogg.org/${name}`} class={`${noFocusStyle} flex rounded-md`}>
+<!-- <a href={`tcitrogg.org/${name}`} class={`${noFocusStyle} flex rounded-md`}> -->
   <p class={`${style} -space-x-1`}>
     <span class="opacity-50">y/</span>
     <span>{name}</span>
   </p>
-</a>
+<!-- </a> -->

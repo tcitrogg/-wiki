@@ -1,3 +1,15 @@
+---
+title: Reishi
+description: Simple high-level programming language
+date: '2023-4-14'
+categories:
+  - reishi
+  - programming
+  - language
+  - bnierimi
+published: true
+---
+
 ## Reishi
 High-level programming language
 

@@ -11,7 +11,9 @@
   const yonko = "bnierimi"
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70"
 
-  export let data;
+	import { formatDate } from '$lib/utils'
+
+	export let data
 </script>
 
 <!-- <section class="p-1"></section> -->
@@ -23,7 +25,7 @@
         <span class="text-blue-600">wiki</span>
       </a>
       <span class="opacity-50">/</span>
-      <span>{data.post.title}</span>
+      <span>{data.meta.title}</span>
       <!-- <span>{data.each_wknote.title} - {"{data.each_wknote.cryptId}"}</span> -->
     </h2>
     <div class="w-full lg:w-10/12 lg:mx-auto h-full flex flex-col space-y-4">
@@ -32,9 +34,11 @@
         <div class="flex items-center justify-between text-sm px-4 py-0.5">
           <div class="flex items-center space-x-2">
             <span class="opacity-50 italic">from</span>
-            <div class="rounded-full py-0.5 px-2 bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700 flex items-center justify-center">
-              <Yuzaname name={yonko}/>
-            </div>
+            <a href="https://bnierimi-gallery.vercel.app" class="">
+              <div class="rounded-full py-0.5 px-2 bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700 flex items-center justify-center">
+                <Yuzaname name={yonko}/>
+              </div>
+            </a>
           </div>
     
           <div class="flex items-center space-x-2">
@@ -51,7 +55,8 @@
       </div>
       <hr class="border-zinc-300/50 dark:border-zinc-700/50">
       <div class="w-full h-full px-4 prose prose-headings:text-zinc-700 prose-headings:dark:text-zinc-200 prose-a:text-zinc-700 prose-a:dark:text-zinc-200 prose-pre:bg-zinc-200 dark:prose-pre:bg-zinc-800 md:prose-pre:bg-zinc-300 md:dark:prose-pre:bg-zinc-900 prose-code:text-zinc-700 prose-code:dark:text-zinc-200 text-zinc-700 dark:text-zinc-200">
-        <SvelteMarkdown source={data.post.content} />
+      <!-- <div class="w-full h-full px-4 prose text-zinc-700 dark:text-zinc-200"> -->
+        <svelte:component this={data.content} />
         <!-- {data.each_wknote.content} -->
   
         <!-- <div>{@html data.response}</div> -->

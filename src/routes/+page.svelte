@@ -3,12 +3,16 @@
   import Mklogo from "$lib/components/Trogg/Mklogo.svelte";
   import Troggapp from "$lib/components/Trogg/Troggapp.svelte";
 
-  export let data;
+	import { formatDate } from '$lib/utils'
+	import * as config from '$lib/config'
+    import type { Post } from "$lib/types";
+
+	export let data: Post[];
 </script>
 
 <main class="w-full h-full">
   <section class="w-full h-full md:hidden block">
-    <Aside listOfPosts={data}/>
+    <Aside {data}/>
   </section>
   <section class="w-full h-full hidden md:flex flex-col items-center justify-center space-y-2">
     <Mklogo title={"Wk"}/>
@@ -21,4 +25,18 @@
       Use Wiki with a Tcitrogg account and your phone at your time.
     </p>
   </section>
+
+
+  <!-- <section>
+    <ul class="posts">
+      {#each data.posts as post}
+        <li class="post">
+          <a href={post.slug} class="title">{post.title}</a>
+          <p class="date">{formatDate(post.date)}</p>
+          <p class="description">{post.description}</p>
+        </li>
+      {/each}
+    </ul>
+  </section> -->
+  
 </main>

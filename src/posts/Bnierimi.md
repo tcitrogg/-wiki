@@ -1,3 +1,13 @@
+---
+title: Bnierimi
+description: Wiki about Bnierimi.
+date: '2023-4-14'
+categories:
+  - bio
+  - bnierimi
+published: true
+---
+
 ## Bnierimi
 Radiance E. Babajide, with the initial `bnierimi`
 

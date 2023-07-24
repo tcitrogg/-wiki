@@ -2,15 +2,16 @@
   import ListOfRows from "./ListOfRows.svelte";
   import Troggapp from "./Trogg/Troggapp.svelte";
   import ThemeBtn from "./ThemeBtn.svelte";
+    import type { Post } from "$lib/types";
 
-  export let listOfPosts: any;
+  export let data: Post[];
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70"
   const focusWithinStyle = "focus-within:outline-none focus-within:ring-1 focus-within:ring-blue-600/70"
   const noFocusStyle = "focus:outline-none focus:ring-0"
 </script>
 
 <aside
-  class="w-full h-full flex-col space-y-4 py-4 px-2"
+  class="w-full h-full flex flex-col space-y-4 py-4 px-2"
 >
   <div class="w-full bg-rose- flex items-center justify-between px-4">
     <h1 class="font-medium text-xl">
@@ -26,5 +27,5 @@
       </button>
     </div>
   </div>
-  <ListOfRows {listOfPosts}/>
+  <ListOfRows {data}/>
 </aside>

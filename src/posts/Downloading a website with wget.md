@@ -1,3 +1,15 @@
+---
+title: Downloading a website with wget
+description: Downloading a website with wget.
+date: '2023-4-14'
+categories:
+  - web
+  - linux
+  - wget
+  - bnierimi
+published: true
+---
+
 <!-- 
     Title: <title of the post>
     Author: <your name here>

@@ -1,3 +1,15 @@
+---
+title: Installing NVM and Nodejs
+description: Installing NVM and Nodejs
+date: '2023-4-14'
+categories:
+  - Linux
+  - MacOs
+  - WSL
+  - JS
+published: true
+---
+
 ## Installing NVM
 - Run this command if you don't have `wget` installed on your PC
 ```bash
