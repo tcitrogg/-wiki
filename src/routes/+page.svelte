@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { fly, fade, scale, slide } from 'svelte/transition';
+	import { flip } from "svelte/animate";
+  
   import Aside from "$lib/components/Aside.svelte";
   import Mklogo from "$lib/components/Trogg/Mklogo.svelte";
   import Troggapp from "$lib/components/Trogg/Troggapp.svelte";
@@ -10,7 +13,7 @@
 	export let data: Post[];
 </script>
 
-<main class="w-full h-full">
+<main transition:slide="{{ duration: 200 }}" class="w-full h-full md:bg-zinc-200 md:dark:bg-zinc-800 md:rounded-lg">
   <section class="w-full h-full md:hidden block">
     <Aside {data}/>
   </section>
