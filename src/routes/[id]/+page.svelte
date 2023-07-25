@@ -17,7 +17,8 @@
 	import { url } from '$lib/config'
 
 	export let data
-  // console.log(data)
+  const link: string= `${url}${data.paramsId}`
+  // console.log(link)
   
 </script>
 
@@ -52,9 +53,9 @@
               <button class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
                 <i class="icon icon-ic_fluent_chat_20_regular flex text-xl"></i>
               </button>
-              
-              <CopyBtn link={`${url}`}/>
-      
+
+              <CopyBtn text={link}/>
+
               <button class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
                 <i class="icon icon-ic_fluent_info_20_regular flex text-xl"></i>
               </button>

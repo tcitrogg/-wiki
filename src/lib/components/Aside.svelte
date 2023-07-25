@@ -8,7 +8,7 @@
 
 	import { onMount } from 'svelte';
 	
-  export let data: Post[];
+  export let data: object[];
   // console.log(data)
 	// import Menu from './Menu.svelte';
 	// import Book from './Book.svelte';

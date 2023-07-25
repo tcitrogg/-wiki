@@ -9,7 +9,8 @@ export async function load({ params }: any) {
 
 		return {
 			content: post.default,
-			meta: post.metadata
+			meta: post.metadata,
+			paramsId: params.id
 		}
 	} catch (e) {
 		throw error(404, `Could not find "${paramsId}"`)
