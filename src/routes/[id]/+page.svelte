@@ -56,12 +56,14 @@
         </div>
       </div>
       <hr class="border-zinc-300/50 dark:border-zinc-700/50">
-      <div class="w-full h-full px-4 prose prose-headings:text-zinc-700 prose-headings:dark:text-zinc-200 prose-a:text-zinc-700 prose-a:dark:text-zinc-200 prose-pre:bg-zinc-200 dark:prose-pre:bg-zinc-800 md:prose-pre:bg-zinc-300 md:dark:prose-pre:bg-zinc-900 prose-code:text-zinc-700 prose-code:dark:text-zinc-200 text-zinc-700 dark:text-zinc-200">
+      <div class="w-full h-full px-4 leading-5 prose prose-headings:text-zinc-700 prose-headings:dark:text-zinc-200 prose-a:text-zinc-700 prose-a:dark:text-zinc-200 prose-pre:bg-zinc-200 dark:prose-pre:bg-zinc-800 md:prose-pre:bg-zinc-300 md:dark:prose-pre:bg-zinc-900 prose-code:p-1 prose-code:mx-0.5 prose-code:rounded-lg prose-code:bg-zinc-200 dark:prose-code:bg-zinc-800 md:prose-code:bg-zinc-300 md:dark:prose-code:bg-zinc-900 prose-code:dark:text-zinc-200 text-zinc-700 dark:text-zinc-200 prose-blockquote:bg-blue-500/30 prose-blockquote:text-zinc-700 prose-blockquote:dark:text-zinc-200
+      prose-blockquote:py-0.5
+      ">
       <!-- <div class="w-full h-full px-4 prose text-zinc-700 dark:text-zinc-200"> -->
         <svelte:component this={data.content} />
         <!-- {data.each_wknote.content} -->
   
-        <!-- <div>{@html data.response}</div> -->
+        <!-- <div>{@html data.content}</div> -->
       </div>
     </div>
   </main>

@@ -1,5 +1,5 @@
 ---
-title: Installing NVM and Nodejs
+title: Installing nvm and nodejs
 description: Installing NVM and Nodejs
 date: '2023-4-14'
 categories:
@@ -15,7 +15,7 @@ published: true
 ```bash
 sudo apt-get install wget
 ```
-()[https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh]
+- - https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh
 - Start by running this command
 ```bash
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
@@ -27,7 +27,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 
-- Restart terminal or run `source ~/.profile, bashrc, zshrc}` then run this command to confirm that `nvm` is successfully installed
+- Restart terminal or run `source ~/{.profile, bashrc, zshrc}` then run this command to confirm that `nvm` is successfully installed
 ```bash
 nvm --version
 ```

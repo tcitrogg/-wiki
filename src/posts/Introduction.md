@@ -13,8 +13,8 @@ published: true
 `t/wiki` a cookbook for programmers, to setup and help get things up and running...
 
 #### /wiki
-[ ] how to setup nvim
-[ ] 
+- [x] how to setup nvim
+- [x] 
 
 #### /issues
 Click on a page and visit the comment section to report issues.
