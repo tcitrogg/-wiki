@@ -1,13 +1,19 @@
 ---
 title: Python roadmap
 description: A roadmap for a beginner to become a Python engineer.
-date: '2023-07-25 12:00PM'
+author: bnierimi~udemy
+thumbnail: ""
+date: 'Tue 25 Jul 2023 11∶59∶00 AM WAT'
+published: true
+contact:
+  - https://twitter.com/bnierimi
+  - https://instagram.com/bnierimi
+  - https://threads.com/bnierimi
 categories:
   - python
   - engineering
   - programming
   - software
-published: true
 ---
 
 ### Python roadmap

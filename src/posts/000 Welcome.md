@@ -1,11 +1,17 @@
 ---
-title: Introduction
-description: Introduction as Readme for wiki.
-date: '2023-4-14'
+title: 000 Welcome
+description: A Readme for `t/Wiki`.
+author: bnierimi
+thumbnail: ""
+date: 'Wed 28 Jun 2023 03∶08∶16 PM WAT'
+published: true
+contact:
+  - https://twitter.com/bnierimi
+  - https://instagram.com/bnierimi
+  - https://threads.com/bnierimi
 categories:
   - wiki
   - bnierimi
-published: true
 ---
 
 # ~wiki

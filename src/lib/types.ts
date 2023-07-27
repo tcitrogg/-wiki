@@ -1,4 +1,5 @@
 export type Categories = string
+export type Contacts = string
 
 export type Post = {
 	title: string
@@ -8,4 +9,7 @@ export type Post = {
 	date: string
 	categories: Categories[]
 	published: boolean
+	author: string
+	thumbnail: string
+	contact: Contacts[]
 }

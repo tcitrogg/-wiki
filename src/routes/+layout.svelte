@@ -11,10 +11,10 @@
   <!-- <div class="lg:container lg:mx-auto h-full flex"> -->
   <div class="w-full h-full flex">
 
-    <section class="w-full xl:w-3/12 lg:w-4/12 md:w-4/12 h-full md:block hidden">
+    <section class="w-full lg:w-3/12 md:w-4/12 h-full md:block hidden">
       <Aside {data}/>
     </section>
-    <section class="w-full xl:w-9/12 lg:w-8/12 md:w-8/12 h-full md:p-1">
+    <section class="w-full lg:w-9/12 md:w-8/12 h-full md:p-1">
 
       <div class="w-full h-full">
         <slot/>

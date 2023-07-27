@@ -18,10 +18,10 @@
 </script>
 
 <!-- {#if !(data.length === 0)} -->
-<ul class="w-full h-full flex flex-col space-y-1 overflow-y-auto">
+<ul class="w-full h-full flex flex-col md:space-y-1 overflow-y-auto">
   {#each data as eachPost}
     <li class="w-full ">
-      <Row title={eachPost.title} id={`${eachPost.nanid}`}/>
+      <Row title={eachPost.title} description={eachPost.description} id={`${eachPost.nanid}`}/>
       <!-- {eachPost.nanid} -->
     </li>
   {/each}

@@ -1,13 +1,18 @@
 ---
 title: Reishi
-description: Simple high-level programming language
-date: '2023-4-14'
+description: A high-level programming language focused on simplicity and speed.
+author: tcitrogg
+thumbnail: ""
+date: 'Thu 27 Jul 2023 10∶53∶09 AM WAT'
+published: true
+contact:
+  - https://twitter.com/tcitrogg
+  - https://instagram.com/tcitrogg
+  - https://threads.com/tcitrogg
 categories:
   - reishi
   - programming
   - language
-  - bnierimi
-published: true
 ---
 
 ## Reishi

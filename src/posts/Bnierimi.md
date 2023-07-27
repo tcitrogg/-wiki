@@ -1,17 +1,23 @@
 ---
 title: Bnierimi
-description: Wiki about Bnierimi.
-date: '2023-4-14'
+description: The demigod amongst us.
+author: dshisho
+thumbnail: ""
+date: 'Thurs 28 August 2030 00∶01∶01 AM WAT'
+published: true
+contact:
+  - https://twitter.com/dshisho
+  - https://instagram.com/dshisho
+  - https://threads.com/dshisho
 categories:
   - bio
   - bnierimi
-published: true
 ---
 
 ## Bnierimi
 Radiance E. Babajide, with the initial `bnierimi`
 
-A Python engineer, Web3 Developer, Security engineer,
+A Python engineer, Blockchain developer, Security engineer, Web developer
 
 Reishi is statically typed and garbage-collected. [t/Wiki](https://t-wiki.vercel.app)
 
