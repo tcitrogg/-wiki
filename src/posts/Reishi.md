@@ -24,7 +24,7 @@ Reishi is statically typed and garbage-collected. [t/Wiki](https://wiki.tcitro.g
 
 - *Designed by:* Radiance E Babajide
 - *Developer:* Tcitrogg Domain
-- *First Appeared:* 28 August 2024, -1year to come
+- *First appeared:* 28 August 2024, -1year to come
 - *OS:* Linux/Unix, Windows, MacOs, Android and more
 - *Paradigm:* Object-oriented, reflective
 - *Preview release:* 01.12.0b8 / 18 July 2023; 0 days ago

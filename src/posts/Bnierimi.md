@@ -27,7 +27,7 @@ Reishi is statically typed and garbage-collected. [t/Wiki](https://t-wiki.vercel
 - `Portfolio:` [bnierimi](https://bnierimi-gallery.vercel.app)
 - `Some projects:` Reishi, t/Pages, t/Wiki, t/Naixja
 - `Social networks:`
-  - [Twitter/bnierimi](https://twitter.com/bnierimi.com)
-  - [Github/bnierimi](https://github.com/bnierimi.com)
-  - [Instagram/bnierimi](https://instagram.com/bnierimi.com)
-  - [Threads/bnierimi](https://threads.com/bnierimi.com)
+  - [Twitter/bnierimi](https://twitter.com/bnierimi)
+  - [Github/bnierimi](https://github.com/bnierimi)
+  - [Instagram/bnierimi](https://instagram.com/bnierimi)
+  - [Threads/bnierimi](https://threads.com/bnierimi)
