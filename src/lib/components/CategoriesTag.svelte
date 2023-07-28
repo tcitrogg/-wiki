@@ -1,8 +1,8 @@
 <script lang="ts">
   import Badge from "./Badge.svelte";
 
-  export let categories: string[];
-  export let selectedCategory: string;
+  export let categories: string[] = [];
+  export let selectedCategory: string = "";
 </script>
 
 <select name="menu" id="menu" bind:value={selectedCategory} class="bg-zinc-200 dark:bg-zinc-800 rounded-full border-none px-3 py-1 text-sm">

@@ -15,6 +15,8 @@
 
 	import { formatDate } from '$lib/utils'
 	import { url } from '$lib/config'
+    import EmptyLabel from '$lib/components/EmptyLabel.svelte';
+    import Editor from '$lib/components/Editor.svelte';
 
 	export let data
   const link: string= `${url}${data.paramsId}`
@@ -35,7 +37,7 @@
   <main transition:slide="{{ duration: 200 }}" class="w-full h-full p4 rounded-md relative flex lg:divide-x-2 lg:divide-zinc-100 dark:lg:divide-zinc-900">
 
     <!-- Display content -->
-    <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-full overflow-y-auto relative flex flex-col md:bg-zinc-200 md:dark:bg-zinc-800 md:rounded-md lg:rounded-l-lg`}>
+    <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-full overflow-y-auto relative flex flex-col md:bg-zinc-200 md:dark:bg-zinc-800 md:rounded-md lg:rounded-l-lg lg:rounded-r-none`}>
       <h2 class="w-full lg:w-10/12 lg:mx-auto font-medium text-lg px-4 py-3 sticky top-0 z-40 bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-800">
         <a href="/" class="">
           <span class="text-blue-600">/wiki</span>
@@ -72,14 +74,7 @@
           </div>
         </div>
         <hr class="border-zinc-300/50 dark:border-zinc-700/50">
-        <div class="w-full h-full px-4 leading-5 prose prose-headings:text-zinc-700 prose-headings:dark:text-zinc-200 prose-a:text-zinc-700 prose-a:dark:text-zinc-200 prose-pre:bg-zinc-200 dark:prose-pre:bg-zinc-800 prose-pre:text-zinc-700 dark:prose-pre:text-zinc-200 md:prose-pre:bg-zinc-300 md:dark:prose-pre:bg-zinc-900 prose-code:p-1 prose-code:mx-0.5 prose-code:rounded-lg prose-code:bg-zinc-200 dark:prose-code:bg-zinc-800 md:prose-code:bg-zinc-300 md:dark:prose-code:bg-zinc-900 prose-code:dark:text-zinc-200 text-zinc-700 dark:text-zinc-200 prose-blockquote:bg-blue-500/10 prose-blockquote:text-zinc-700 prose-blockquote:dark:text-zinc-200
-        prose-blockquote:py-0.5 prose-blockquote:border-l-blue-500 prose-strong:text-zinc-700 dark:prose-strong:text-zinc-200">
-        <!-- <div class="w-full h-full px-4 prose text-zinc-700 dark:text-zinc-200"> -->
-          <svelte:component this={data.content} />
-          <!-- {data.each_wknote.content} -->
-    
-          <!-- <div>{@html data.content}</div> -->
-        </div>
+        <Editor content={data.content}/>
       </div>
     </section>
 
@@ -88,7 +83,8 @@
 
       <!-- overlay -->
       <div on:click={handleSideTab} class="w-full h-full bg-transparent/30 absolute top-0 left-0 md:rounded-md lg:rounded-r-lg"></div>
-      <section class={`w-11/12 md:w-full h-full fixed top-0 right-0 md:relative py-3 px-3 bg-zinc-100 dark:bg-zinc-900 shadow-md md:bg-zinc-200 md:dark:bg-zinc-800 md:shadow-none md:rounded-md lg:rounded-r-lg flex flex-col justify-between`}>
+
+      <section class={`w-11/12 md:w-full h-full fixed top-0 right-0 md:relative py-3 px-3 bg-zinc-100 dark:bg-zinc-900 shadow-md md:bg-zinc-200 md:dark:bg-zinc-800 md:shadow-none md:rounded-md lg:rounded-r-lg lg:rounded-l-none flex flex-col justify-between`}>
         <div class="text-sm">
           <p class="font-medium text-lg block lg:hidden mb-2 -space-x-0.5">
             <span class="opacity-80">/</span>
@@ -137,9 +133,13 @@
                 <div class="text-xs flex flex-wrap relative ">
                   <!-- <div class="absolute top-0 left-0.5 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-300/50 md:dark:bg-zinc-700/50 h-full w-0.5 rounded-full"></div> -->
                   <!-- <div class="absolute top-0 left-0.5 border-l-2 border-l-zinc-200 dark:border-l-zinc-800 h-full rounded-full"></div> -->
-                  {#each data.meta.categories as each_category}
-                    <Badge text={each_category}/>
-                  {/each}
+                  {#if data.meta.categories.length > 0}
+                    {#each data.meta.categories as each_category}
+                      <Badge text={each_category}/>
+                    {/each}
+                  {:else}
+                    <EmptyLabel text="No category"/>
+                  {/if}
                 </div>
               </div>
             </div>
