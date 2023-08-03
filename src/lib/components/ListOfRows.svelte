@@ -1,18 +1,7 @@
 <script lang="ts">
-    import type { Post } from "$lib/types";
+  import type { Post } from "$lib/types";
   import Row from "./Row.svelte";
   
-
-  // const listOfPosts: any[] = [
-  //   "README", "Installing NVM and Nodejs", "Downloading a website with wget", "Calculate your CGPA with t/Akada", "Fluent system icons", "Tailwind",
-  //   "Advanced routing", "Pathless layout routes", "Chapel of the light"
-  // ]
-
-  // export let listOfPosts: object[] = []
-  // console.log("from ListOfRows", listOfPosts)
-
-  // import { posts } from "../stores";
-
   export let data: Post[];
   data = data
 </script>

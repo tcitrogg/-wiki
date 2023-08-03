@@ -2,6 +2,7 @@
 title: Installing nvm and nodejs
 description: "Installing nvm and nodejs on a Unix machine: Linux | MacOs | WSL"
 author: bnierimi
+domain: JavaScript
 thumbnail: ""
 date: 'Sat 17 Jun 2023 12∶01∶25 PM WAT'
 published: true
@@ -10,10 +11,10 @@ contact:
   - https://instagram.com/bnierimi
   - https://threads.com/bnierimi
 categories:
-  - Linux
-  - MacOs
-  - WSL
-  - JS
+  - linux
+  - macOs
+  - wSL
+  - jS
 ---
 
 ## Installing NVM

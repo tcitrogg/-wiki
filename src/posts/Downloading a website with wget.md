@@ -2,6 +2,7 @@
 title: Downloading a website with wget
 description: How to download a website to work offline | locally on a PC using wget.
 author: bnierimi~linuxjournal
+domain: Website
 thumbnail: ""
 date: 'Tue 11 Jul 2023 01∶16∶43 AM WAT'
 published: true

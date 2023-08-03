@@ -2,6 +2,7 @@
 title: LogJournal
 description: The lognote of the demigod amongst us.
 author: bnierimi
+domain: Bnierimi
 thumbnail: ""
 date: 'Thurs 28 August 2030 00∶01∶01 AM WAT'
 published: true
@@ -20,5 +21,6 @@ lil cap
 - -01:20AM
 > So yeah it happened, while man was with _not mikasa rest :)_ and there we have it
 
-
-### Friday 28 July 2023
+### Friday 31 July - 01 August 2023
+- -00:00
+> Yep, she gave me the hoodie

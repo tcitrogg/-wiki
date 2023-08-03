@@ -16,11 +16,10 @@
 	import { formatDate } from '$lib/utils'
 	import { url } from '$lib/config'
     import EmptyLabel from '$lib/components/EmptyLabel.svelte';
-    import Editor from '$lib/components/Editor.svelte';
+    import MDBoard from '$lib/components/MDBoard.svelte';
 
 	export let data
-  const link: string= `${url}${data.paramsId}`
-  // console.log(data.meta)
+  const link: string= `${url}wk/${data.paramsId}`
 
   let isSideTab: boolean = true;
   $: isSideTabSmScreen = false;
@@ -31,14 +30,19 @@
   
 </script>
 
+<!-- <svelte:head>
+  <title>t/wiki/{data.meta.title}</title>
+  <meta name="description" content={data.meta.description}>
+</svelte:head> -->
+
 <!-- <section class="p-1"></section> -->
 <!-- {#if isReady}
 {/if} -->
-  <main transition:slide="{{ duration: 200 }}" class="w-full h-full p4 rounded-md relative flex lg:divide-x-2 lg:divide-zinc-100 dark:lg:divide-zinc-900">
+  <main transition:slide="{{ duration: 200 }}" class={`${isSideTab ? "w-full" : "w-full md:w-11/12 lg:w-10/12 mx-auto" } h-full md:pr-2 rounded-md relative flex space-x-2`}>
 
     <!-- Display content -->
-    <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-full overflow-y-auto relative flex flex-col md:bg-zinc-200 md:dark:bg-zinc-800 md:rounded-md lg:rounded-l-lg lg:rounded-r-none`}>
-      <h2 class="w-full lg:w-10/12 lg:mx-auto font-medium text-lg px-4 py-3 sticky top-0 z-40 bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-800">
+    <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-full overflow-y-auto relative flex flex-col md:bg-zinc-200 md:dark:bg-zinc-900 md:rounded-md md:borderborder-zinc-300dark:border-zinc-700`}>
+      <h2 class="w-full lg:w-10/12 lg:mx-auto font-medium text-lg px-4 py-3 sticky top-0 z-40 bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-900">
         <a href="/" class="">
           <span class="text-blue-600">/wiki</span>
         </a>
@@ -46,6 +50,7 @@
         <span>{data.meta.title}</span>
         <!-- <span>{data.each_wknote.title} - {"{data.each_wknote.cryptId}"}</span> -->
       </h2>
+
       <div class="w-full lg:w-10/12 lg:mx-auto h-full flex flex-col space-y-4">
         <div class="space-y-2">
     
@@ -67,6 +72,10 @@
 
               <CopyBtn text={link}/>
 
+              <button title="Download" on:click={handleSideTab} class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
+                <i class="icon icon-ic_fluent_arrow_download_20_regular flex text-xl"></i>
+              </button>
+
               <button title="Show details" on:click={handleSideTab} class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
                 <i class="icon icon-ic_fluent_info_20_regular flex text-xl"></i>
               </button>
@@ -74,7 +83,7 @@
           </div>
         </div>
         <hr class="border-zinc-300/50 dark:border-zinc-700/50">
-        <Editor content={data.content}/>
+        <MDBoard content={data.content}/>
       </div>
     </section>
 
@@ -84,10 +93,10 @@
       <!-- overlay -->
       <div on:click={handleSideTab} class="w-full h-full bg-transparent/30 absolute top-0 left-0 md:rounded-md lg:rounded-r-lg"></div>
 
-      <section class={`w-11/12 md:w-full h-full fixed top-0 right-0 md:relative py-3 px-3 bg-zinc-100 dark:bg-zinc-900 shadow-md md:bg-zinc-200 md:dark:bg-zinc-800 md:shadow-none md:rounded-md lg:rounded-r-lg lg:rounded-l-none flex flex-col justify-between`}>
+      <section class={`w-11/12 md:w-full h-full fixed top-0 right-0 md:relative py-3 px-3 bg-zinc-100 dark:bg-zinc-800 shadow-md border border-zinc-300 dark:border-zinc-700 md:shadow-none md:rounded-md flex flex-col justify-between`}>
         <div class="text-sm">
           <p class="font-medium text-lg block lg:hidden mb-2 -space-x-0.5">
-            <span class="opacity-80">/</span>
+            <!-- <span class="opacity-80"></span> -->
             <span class="opacity-80">Details</span>
           </p>
           <div class="space-y-1.5 ">
@@ -99,6 +108,10 @@
               <i class="icon icon-ic_fluent_info_20_regular flex text-xl p-1 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-300/50 md:dark:bg-zinc-700/50 rounded-full"></i>
               <span class="pt-1">{data.meta.description}</span>
             </p>
+            <p class="flex items-start space-x-2">
+              <i class="icon icon-ic_fluent_document_one_page_20_regular flex text-xl p-1 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-300/50 md:dark:bg-zinc-700/50 rounded-full"></i>
+              <span class="pt-1">{data.meta.domain}</span>
+            </p>
             <!-- <p class="flex items-start space-x-2">
               <i class="icon icon-ic_fluent_chat_multiple_20_regular flex text-xl p-1 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-300/50 md:dark:bg-zinc-700/50 rounded-full"></i>
               <span class="font-medium pt-1">2.4k</span>
@@ -107,19 +120,19 @@
               <i class="icon icon-ic_fluent_clock_20_regular flex text-xl p-1 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-300/50 md:dark:bg-zinc-700/50 rounded-full"></i>
               <span class="pt-1">{data.meta.date}</span>
             </p>
-            <p class="flex items-center space-x-2">
+            <!-- <p class="flex items-center space-x-2">
               <i class="icon icon-ic_fluent_arrow_upload_20_regular flex text-xl p-1 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-300/50 md:dark:bg-zinc-700/50 rounded-full"></i>
               <Badge text={data.meta.published}/>
-            </p>
+            </p> -->
             <div class="">
               <div class="flex items-start space-x-2">
                 <i class="icon icon-ic_fluent_tag_circle_20_regular flex text-xl p-1 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-300/50 md:dark:bg-zinc-700/50 rounded-full"></i>
                 <span class="font-medium pt-1">Contact</span>
               </div>
               <div class="pl-3.5">
-                <div class="flex flex-col space-y- text-xs border-l border-l-zinc-200 dark:border-l-zinc-800 md:border-l-zinc-300/50 md:dark:border-l-zinc-700/50">
+                <div class="flex flex-col space-y- text-sm border-l border-l-zinc-200 dark:border-l-zinc-800 md:border-l-zinc-300/50 md:dark:border-l-zinc-700/50">
                   {#each data.meta.contact as each_contact}
-                    <a href={each_contact} class="rounded-r-lg py-1 px-1  hover:underline hover:text-blue-500">{each_contact}</a>
+                    <a href={each_contact} class="rounded-r-lg py-1 pr-1 pl-3 hover:underline hover:text-blue-500">{each_contact}</a>
                   {/each}
                 </div>
               </div>

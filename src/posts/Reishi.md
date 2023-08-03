@@ -2,6 +2,7 @@
 title: Reishi
 description: A high-level programming language focused on simplicity and speed.
 author: tcitrogg
+domain: Demigod
 thumbnail: ""
 date: 'Thu 27 Jul 2023 10∶53∶09 AM WAT'
 published: true

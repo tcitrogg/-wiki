@@ -5,7 +5,7 @@ export async function load({ params }: any) {
 //   const firstLetter: string = paramsId.charAt(0).toUpperCase()             // Convert the first letter to uppercase
 //   const paramsName: string = `${firstLetter}${paramsId.slice(1)}`
 	try {
-		const post = await import(`../../posts/${paramsId}.md`)
+		const post = await import(`../../../posts/${paramsId}.md`)
 
 		return {
 			content: post.default,

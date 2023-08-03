@@ -2,6 +2,7 @@
 title: SU 23 Writers’ Contest
 description: A writeup about Nigeria our homeland.
 author: holyrerri3
+domain: Chan
 thumbnail: ""
 date: 'Sat 17 Jun 2023 12∶01∶25 PM WAT'
 published: true

@@ -1,7 +1,8 @@
 ---
 title: Python roadmap
-description: A roadmap for a beginner to become a Python engineer.
+description: A guide designed to help newcomers progress towards becoming a skilled Python engineer.
 author: bnierimi~udemy
+domain: Python
 thumbnail: ""
 date: 'Tue 25 Jul 2023 11∶59∶00 AM WAT'
 published: true
@@ -17,12 +18,12 @@ categories:
 ---
 
 ### Python roadmap
-- `Description:` A roadmap for a beginner to become a Python engineer.
-- `Requirements:` No programming knowledge is needed: You will learn everything in this course from scratch
+- `Description:` A guide designed to help newcomers progress towards becoming a skilled Python engineer.
+- `Requirements:` No prior programming experience is required as this course covers all the fundamentals from the ground up.
 
 #### Introduction to the Course and Python
 - __Preview__
-- Setting up Python and Integrated Development Environment
+- Configuring Python and the Integrated Development Environment (IDE) for use.
 
 #### 0. Introduction
 - The `print` function
@@ -67,13 +68,20 @@ categories:
 - Modes in Python
 - Modes for other file types
 - Reading from a text file
-- Renaming a file
 - Writing to a text file
 - Saving data to the file
 - Appending data to a file
 - Closing a file
-- Deleting a file or directory[folder]
 - The `with` statement
+- Renaming a file
+- Deleting a file or directory[folder]
+- Get the current working directory
+- List files in a directory
+- List directories
+- __Activity__:
+  - Store a dictionary in a file
+  - Read the file, which should give us the dictionary back
+  - Get the value of the first item in the dictionary
 - Writing `dict` to a file
 - Reading `dict` from a file
 

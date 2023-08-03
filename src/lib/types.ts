@@ -5,11 +5,13 @@ export type Post = {
 	title: string
 	id: string
 	nanid: string
+	author: string
 	description: string
+	domain: string
 	date: string
 	categories?: Categories[]
+	tableOfContent?: string[]
 	published: boolean
-	author: string
 	thumbnail: string
 	contact: Contacts[]
 }

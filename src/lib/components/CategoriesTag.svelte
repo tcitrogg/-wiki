@@ -5,11 +5,11 @@
   export let selectedCategory: string = "";
 </script>
 
-<select name="menu" id="menu" bind:value={selectedCategory} class="bg-zinc-200 dark:bg-zinc-800 rounded-full border-none px-3 py-1 text-sm">
+<select name="menu" id="menu" bind:value={selectedCategory} class="bg-zinc-200 dark:bg-zinc-900 rounded-full border-none px-3 py-1 text-sm">
   <!-- <option disabled selected value="">Select a language.</option> -->
   <option value="" disabled selected>Categories</option>
   <option value="all">All</option>
-  {#each categories as each_category}
+  {#each categories.sort() as each_category}
     <option value={each_category}>
       {each_category}
     </option>

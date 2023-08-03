@@ -29,6 +29,7 @@
 		"boring-avatars": "^1.10.1",
 		"nanoid": "^4.0.2",
 		"short-unique-id": "^4.4.4",
+		"simplemde": "^1.11.2",
 		"svelte-boring-avatars": "^1.2.3",
 		"svelte-copy-to-clipboard": "^0.2.5",
 		"svelte-markdown": "^0.2.3",

@@ -1,6 +1,7 @@
 <script lang="ts">
   export let title: string = ""
   export let id: string = ""
+  // export let side: "top" | "bottom" | "left" | "right" = "right"
 </script>
 
 <div id={id} role="tooltip" class="absolute z-10 invisible inline-block px-3 py-1 text-sm font-medium bg-zinc-300 rounded-lg shadow-sm opacity-0 tooltip dark:bg-zinc-700">

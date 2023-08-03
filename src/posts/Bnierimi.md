@@ -2,6 +2,7 @@
 title: Bnierimi
 description: The demigod amongst us.
 author: dshisho
+domain: Bnierimi
 thumbnail: ""
 date: 'Thurs 28 August 2030 00∶01∶01 AM WAT'
 published: true

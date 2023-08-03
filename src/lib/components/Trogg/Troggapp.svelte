@@ -8,8 +8,8 @@
 </script>
 
 <!-- <a href={`/`} class={`${noFocusStyle} flex rounded-md`}> -->
-  <p class={`${style} -space-x-1`}>
+  <p class={`${style}`}>
     <span class="opacity-50">t/</span>
-    <span>{name}</span>
+    <span class="font-medium">{name}</span>
   </p>
 <!-- </a> -->

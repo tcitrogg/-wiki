@@ -2,6 +2,7 @@
 title: 000 Welcome
 description: A Readme for `t/Wiki`.
 author: bnierimi
+domain: Wiki
 thumbnail: ""
 date: 'Wed 28 Jun 2023 03∶08∶16 PM WAT'
 published: true
