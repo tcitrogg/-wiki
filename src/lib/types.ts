@@ -1,4 +1,4 @@
-export type Categories = string
+export type Topics = string
 export type Contacts = string
 
 export type Post = {
@@ -7,9 +7,9 @@ export type Post = {
 	nanid: string
 	author: string
 	description: string
-	domain: string
+	path: string
 	date: string
-	categories?: Categories[]
+	topics?: Topics[]
 	tableOfContent?: string[]
 	published: boolean
 	thumbnail: string

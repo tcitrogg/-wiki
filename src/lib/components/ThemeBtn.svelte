@@ -1,11 +1,9 @@
 <script>
 	import { browser } from "$app/environment";
-	import { fly, fade, scale, slide } from "svelte/transition";
-  
+	import { slide } from "svelte/transition";
   import Tooltip from "$lib/components/Tooltip.svelte";
 
 	let isDarkMode = true;
-	
 	const handleMode = () => {
 		isDarkMode = !isDarkMode;
 
@@ -30,7 +28,7 @@
 </script>
 
 <!-- <input type="checkbox" checked={isDarkMode} on:click={handleMode} name="theme-toggle" id="theme-toggle"/> -->
-<button data-tooltip-target={`side-nav-bar-mode-btn`} data-tooltip-placement="right" type="button" title="Theme" on:click={handleMode} class={`p-0.5 relative ${isDarkMode ? "bg-blue-700 hover:bg-blue-600" : " bg-gray-300 dark:bg-zinc-800 hover:bg-transparent/10 dark:hover:bg-zinc-700/70"} rounded-full focus:outline-none focus:ring-1 focus:ring-blue-600 overflow-hidden`}>
+<button data-tooltip-target={`side-nav-bar-mode-btn`} data-tooltip-placement="right" type="button" on:click={handleMode} class={`p-0.5 relative ${isDarkMode ? "bg-blue-700 hover:bg-blue-600" : " bg-gray-300 dark:bg-zinc-800 hover:bg-transparent/10 dark:hover:bg-zinc-700/70"} rounded-full focus:outline-none focus:ring-1 focus:ring-blue-600 overflow-hidden`}>
 {#if isDarkMode}
 	<i transition:slide class="relative icon icon-ic_fluent_weather_sunny_20_regular flex text-xl rounded-full text-zinc-100 p-0.5"></i>
 {:else}

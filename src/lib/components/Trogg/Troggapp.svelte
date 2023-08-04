@@ -10,6 +10,6 @@
 <!-- <a href={`/`} class={`${noFocusStyle} flex rounded-md`}> -->
   <p class={`${style}`}>
     <span class="opacity-50">t/</span>
-    <span class="font-medium">{name}</span>
+    <span class="font-medium text-blue-700">{name}</span>
   </p>
 <!-- </a> -->

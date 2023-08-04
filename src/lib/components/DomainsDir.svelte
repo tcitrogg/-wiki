@@ -1,11 +1,11 @@
 <!-- src/components/Accordion.svelte -->
 
 <script lang="ts">
-	import { onMount } from 'svelte';
+    import { getPath } from "$lib/utils";
   import ListOfRows from "./ListOfRows.svelte";
   export let domains: any[] = [];
+  export let norms: any[] = [];
   export let posts: any[] = [];
-  let domain_map: any[] = [];
 
   function toggleAccordion(itemIndex: any) {
     domains = domains.map((item, index) => ({
@@ -17,16 +17,16 @@
   }
   
   const getEachDomainContent = (domainTitle: string) => {
-    let grouped = posts.filter((eachPost) => eachPost.domain === domainTitle)
-    return grouped
+    return posts.filter((eachPost) => getPath(eachPost.path) === domainTitle)
   }
 
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-700/70"
 </script>
 
+<!-- ~folders -->
 {#each domains as item, index}
-  <div class={`border border-transparent ${item.isOpen ? "border-zinc-200 dark:border-zinc-700 hover:bg-transparent dark:hover:bg-transparent shadow" : "" } hover:bg-zinc-300 dark:hover:bg-zinc-800 md:hover:bg-zinc-200 md:dark:hover:bg-zinc-700 rounded-lg`}>
-    <button class={`${focusStyle} w-full px-2 py-2 text-left flex items-center justify-between space-x-2 rounded-lg`} on:click={() => toggleAccordion(index)}>
+  <div class={`rounded- ${item.isOpen ? "hover:bg-transparent dark:hover:bg-transparent" : "hover:bg-zinc-300 dark:hover:bg-zinc-800 md:hover:bg-zinc-200 md:dark:hover:bg-zinc-700" } `}>
+    <button class={`${focusStyle} w-full px-4 py-1 text-left flex items-center justify-between space-x-2 ${item.isOpen ? "bg-zinc-300 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-700" : ""}`} on:click={() => toggleAccordion(index)}>
       <span class="font-medium">
         {item.title}
       </span>
@@ -34,7 +34,16 @@
     </button>
 
     {#if item.isOpen}
-      <ListOfRows data={getEachDomainContent(item.title)}/>
+      <div class="relative">
+        <div class="bg-zinc-400 dark:bg-zinc-700 md:bg-zinc-300 md:dark:bg-zinc-600 w-0.5 h-full absolute top-0 left-2"></div>
+          <ListOfRows data={getEachDomainContent(item.title)}/>
+      </div>
     {/if}
+    
   </div>
 {/each}
+
+<!-- ~files -->
+<ListOfRows data={norms}/>
+<!-- {#each norms as item, index}
+{/each} -->

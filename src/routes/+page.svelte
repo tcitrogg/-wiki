@@ -1,26 +1,30 @@
 <script lang="ts">
 	import { fly, fade, scale, slide } from 'svelte/transition';
-	import { flip } from "svelte/animate";
   
+  import type { Post } from "$lib/types";
   import Aside from "$lib/components/Aside.svelte";
   import Mklogo from "$lib/components/Trogg/Mklogo.svelte";
   import Troggapp from "$lib/components/Trogg/Troggapp.svelte";
+    import ThemeBtn from '$lib/components/ThemeBtn.svelte';
+    import Tooltip from '$lib/components/Tooltip.svelte';
 
-	import { formatDate } from '$lib/utils'
-	import * as config from '$lib/config'
-    import type { Post } from "$lib/types";
+	export let data: {posts: Post[]};
 
-	export let data: Post[];
+  const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70";
+  const focusWithinStyle =
+    "focus-within:outline-none focus-within:ring-1 focus-within:ring-blue-600/70";
+  const noFocusStyle = "focus:outline-none focus:ring-0";
 </script>
 
-<section class="w-full h-full pr-2">
-  <main transition:slide="{{ duration: 200 }}" class="w-full h-full md:bg-zinc-200 md:dark:bg-zinc-900 md:rounded">
+<section class="w-full h-full md:pr-2">
+  <main transition:slide="{{ duration: 200 }}" class="w-full h-full md:rounded">
 
     
-    <section class="w-full h-full md:hidden block">
-      <!-- top nav bar -->
-      <div class={`w-full h-fit flex bg-rose-500border-bborder-b-zinc-200dark:border-b-zinc-800`}>
-        <nav class="w-full mx-auto py-1.5 px-5 flex items-center justify-between bg-green-">
+    <section class="w-full h-full md:hidden flex flex-col">
+
+      <!-- top bar -->
+      <!-- <div class={`w-full h-fit hidden md:flex border-bborder-b-zinc-200dark:border-b-zinc-800`}>
+        <nav class="w-full mx-auto py-2 px-5 flex items-center justify-between bg-green-">
   
           <section class="h-full flex items-center space-x-">
             <h1 class="font-medium text-base">
@@ -28,11 +32,37 @@
             </h1>
           </section>
           <section class="h-full flex items-center space-x-"></section>
+          <section class="h-full hidden :flex items-center space-x-">
+            
+            <a href="/search" data-tooltip-target={`pg-top-bar-btn-1`} data-tooltip-placement="right" class={`${focusStyle} px-3 py-1.5 bg-transparent/10 dark:bg-zinc-700 hover:bg-zinc-400 dark:hover:bg-zinc-600 rounded-full flex items-center space-x-2 text-sm`}>
+              <i class={`icon icon-ic_fluent_search_20_regular flex text-lg`}></i>
+              <p class="">Search</p>
+            </a>
+            <Tooltip title={"Search"} id={"pg-top-bar-btn-1"}/>
+          </section>
+        </nav>
+      </div> -->
+      
+      <div class="w-full h-full bg-zinc-300 dark:bg-zinc-800 rounded-tl-md">
+        <Aside {data}/>
+      </div>
+      
+      <!-- btm bar -->
+      <div class={`w-full h-fit hidden :flex bg-zinc-300 dark:bg-zinc-800 border-bborder-b-zinc-200dark:border-b-zinc-800`}>
+        <nav class="w-full mx-auto py-1.5 px-5 flex items-center justify-between bg-green-">
+  
           <section class="h-full flex items-center space-x-">
+
+            <a href="/wkWriter" data-tooltip-target={`pg-btm-bar-btn-1`} data-tooltip-placement="top" class={`${focusStyle} p-1.5 bg-transparent/10 dark:bg-zinc-700 hover:bg-zinc-400 dark:hover:bg-zinc-600 rounded-full flex items-center space-x-2 text-sm`}>
+              <i class={`icon icon-ic_fluent_clipboard_text_edit_20_regular flex text-lg`}></i>
+            </a>
+            <Tooltip title={"Writer"} id={"pg-btm-bar-btn-1"}/>
+          </section>
+          <section class="h-full flex items-center space-x-">
+            <ThemeBtn/>
           </section>
         </nav>
       </div>
-      <Aside {data}/>
     </section>
     <section class="w-full h-full hidden md:flex flex-col items-center justify-center space-y-2">
       <Mklogo title={"Wk"}/>
@@ -40,9 +70,7 @@
         <Troggapp name="Wiki"/>
       </h2>
       <p class="md:w-8/12 lg:w-6/12 b-rose-600 text-sm text-center opacity-50">
-        Get direct help from our community on different issues and our products.
-        <br>
-        Use Wiki with a Tcitrogg account and your phone at your time.
+        Aims to provide a diverse and reliable resource for individuals seeking knowledge on numerous subjects.
       </p>
     </section>
   
