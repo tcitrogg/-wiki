@@ -42,7 +42,7 @@
 <aside
   class="w-full h-full flex flex-col space-y-1 py-2 md:py-1.5"
 >
-  <h3 class="font-medium text-sm md:text-base px-4 my-2 opacity-70">Articles</h3>
+  <h3 class="font-medium px-4 my-2 opacity-70">Articles</h3>
 
   <div class="overflow-y-auto space-y-2 px-">
     <DomainsDir {norms} domains={getDomains()} posts={data.posts}/>

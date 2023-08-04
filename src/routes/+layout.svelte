@@ -95,7 +95,7 @@
         </section>
         <section class="w-full lg:w-9/12 md:w-8/12 h-full md:py-2 md:pl-2">
     
-          <div class={`${focusStyle} w-full h-full overflow-y-auto md:rounded-md md:pb-20`}>
+          <div class={`${focusStyle} w-full h-full flex flex-col overflow-y-auto md:rounded-md md:pb-20`}>
             <slot/>
           </div>
         </section>

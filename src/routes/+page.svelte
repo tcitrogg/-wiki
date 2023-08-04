@@ -64,6 +64,7 @@
         </nav>
       </div>
     </section>
+    
     <section class="w-full h-full hidden md:flex flex-col items-center justify-center space-y-2">
       <Mklogo title={"Wk"}/>
       <h2 class="font-medium text-xl">
