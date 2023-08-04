@@ -30,7 +30,7 @@
 
 
 <svelte:head>
-  <title>{`t/Wiki/${data.meta.title}` || title}</title>
+  <title>{`bn/Wiki/${data.meta.title}` || title}</title>
   <meta name="description" content={data.meta.description || description}>
   <meta name="keywords" content={`${data.meta.topics}` || keywords}>
   <meta name="datetime" content={formatDate(data.meta.date) || '03 Aug 2023'}>

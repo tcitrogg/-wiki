@@ -9,7 +9,7 @@
 
 <!-- <a href={`tcitrogg.org/${name}`} class={`${noFocusStyle} flex rounded-md`}> -->
   <p class={`${style} -space-x-1`}>
-    <span class="opacity-50">y/</span>
+    <span class="opacity-50">g/</span>
     <span>{name}</span>
   </p>
 <!-- </a> -->

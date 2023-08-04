@@ -1,26 +1,26 @@
 # Wiki
-`t/Wiki` a cookbook for programmers, to setup and help get things up and running...
+`bn/Wiki` a cookbook for programmers, to setup and help get things up and running...
 
 - *Name:* Wiki
-- *Domain:* Tcitrogg :: `t/`
+- *Domain:* Bnierimi :: `bn/`
 
-This is the format for every post, must be at the top of every post
+This is the format for every post, must be at the top of every article
 ```yml
 ---
-title: Wanpisu
-description: Story about a demigod, Yonko::bnierimi.
-author: dshisho
+title: About bn/Wiki
+description: About bn/Wiki, https://twitter.com/bnierimi
 thumbnail: ""
-date: 'Thu 27 Jul 2023 12∶48∶00 PM WAT'
-published: true
+author: bnierimi
 contact:
-  - https://twitter.com/dshisho
-  - https://instagram.com/dshisho
-  - https://threads.com/dshisho
-categories:
-  - poetry
-  - writeup
-  - wanpisu
+  - https://twitter.com/bnierimi
+  - https://instagram.com/bnierimi
+  - https://threads.com/bnierimi
+published: true
+topics:
+  - wiki
+  - bnierimi
+  - about
+date: '03 Aug 2023'
 # Thumbnail: <url, e.g. images/image.webp then put that image in the static/images folder>
 ---
 ```
@@ -35,7 +35,7 @@ High-level programming language
 
 Lithium is a high-level, general purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule.
 
-Lithium is statically typed and garbage-collected. [t/Wiki](https://t-wiki.vercel.app/Lithium)
+Lithium is statically typed and garbage-collected. [bn/Wiki](https://bn-wiki.vercel.app/Lithium)
 
 - *Developer:* Radiance E. Babajide
 - *Maintained by:* Tcitrogg Domain
@@ -63,11 +63,13 @@ fx prompt(text:str) -> None{
 - [?] also list similar articles in the same category with the currently viewed one
 - [%] add a `writer` with `preview` by the side
 - [ ] fetch Wiki articles from a GitHub repo everyone can access and add License and Policy and Code of Conduct
+- [ ] and fix the download Wiki articles
+- [ ] and fix search page
 
 
 ---
 yours `tcitrogg/bnierimi`
-- [Twitter/bnierimi](https://twitter.com/bnierimi.com)
-- [Github/bnierimi](https://github.com/bnierimi.com)
-- [Instagram/bnierimi](https://instagram.com/bnierimi.com)
-- [Threads/bnierimi](https://threads.com/bnierimi.com)
+- [Twitter/bnierimi](https://twitter.com/bnierimi)
+- [Github/bnierimi](https://github.com/bnierimi)
+- [Instagram/bnierimi](https://instagram.com/bnierimi)
+- [Threads/bnierimi](https://threads.com/bnierimi)

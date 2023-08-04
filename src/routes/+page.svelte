@@ -4,7 +4,7 @@
   import type { Post } from "$lib/types";
   import Aside from "$lib/components/Aside.svelte";
   import Mklogo from "$lib/components/Trogg/Mklogo.svelte";
-  import Troggapp from "$lib/components/Trogg/Troggapp.svelte";
+  import Bnapp from "$lib/components/Bnapp.svelte";
     import ThemeBtn from '$lib/components/ThemeBtn.svelte';
     import Tooltip from '$lib/components/Tooltip.svelte';
 
@@ -28,7 +28,7 @@
   
           <section class="h-full flex items-center space-x-">
             <h1 class="font-medium text-base">
-              <Troggapp name="Wiki" />
+              <Bnapp name="Wiki" />
             </h1>
           </section>
           <section class="h-full flex items-center space-x-"></section>
@@ -67,7 +67,7 @@
     <section class="w-full h-full hidden md:flex flex-col items-center justify-center space-y-2">
       <Mklogo title={"Wk"}/>
       <h2 class="font-medium text-xl">
-        <Troggapp name="Wiki"/>
+        <Bnapp name="Wiki"/>
       </h2>
       <p class="md:w-8/12 lg:w-6/12 b-rose-600 text-sm text-center opacity-50">
         Aims to provide a diverse and reliable resource for individuals seeking knowledge on numerous subjects.

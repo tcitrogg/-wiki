@@ -3,7 +3,7 @@
   import type { Post } from "$lib/types";
   import { colors } from "$lib/utils";
   import Aside from "$lib/components/Aside.svelte";
-  import Troggapp from "$lib/components/Trogg/Troggapp.svelte";
+  import Bnapp from "$lib/components/Bnapp.svelte";
   import ThemeBtn from "$lib/components/ThemeBtn.svelte";
   import Indicator from "$lib/components/Indicator.svelte";
   import Tooltip from "$lib/components/Tooltip.svelte";
@@ -28,7 +28,7 @@
 
       <section class="h-full flex items-center space-x-">
         <h1 class="font-medium text-base">
-          <Troggapp name="Wiki" />
+          <Bnapp name="Wiki" />
         </h1>
       </section>
       <section class="h-full flex items-center space-x-"></section>
