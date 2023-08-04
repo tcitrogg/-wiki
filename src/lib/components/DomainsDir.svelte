@@ -25,8 +25,8 @@
 
 <!-- ~folders -->
 {#each domains as item, index}
-  <div class={`rounded- ${item.isOpen ? "hover:bg-transparent dark:hover:bg-transparent" : "hover:bg-zinc-300 dark:hover:bg-zinc-800 md:hover:bg-zinc-200 md:dark:hover:bg-zinc-700" } `}>
-    <button class={`${focusStyle} w-full px-4 py-1 text-left flex items-center justify-between space-x-2 ${item.isOpen ? "bg-zinc-300 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-700" : ""}`} on:click={() => toggleAccordion(index)}>
+  <div class={`rounded- ${item.isOpen ? "hover:bg-transparent dark:hover:bg-transparent" : "hover:bg-zinc-300dark:hover:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700" } `}>
+    <button class={`${focusStyle} w-full px-4 py-1 text-left flex items-center justify-between space-x-2 ${item.isOpen ? "bg-zinc-300dark:bg-zinc-800 bg-zinc-200 dark:bg-zinc-700" : ""}`} on:click={() => toggleAccordion(index)}>
       <span class="font-medium">
         {item.title}
       </span>
