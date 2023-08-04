@@ -60,7 +60,7 @@ fx prompt(text:str) -> None{
 - [x] add category filter
 - [ ] fix the copy alert and make it better, _not using alert_
 - [x] add error page
-- [ ] also list similar articles in the same category with the currently viewed one
+- [?] also list similar articles in the same category with the currently viewed one
 - [%] add a `writer` with `preview` by the side
 - [ ] fetch Wiki articles from a GitHub repo everyone can access and add License and Policy and Code of Conduct
 
