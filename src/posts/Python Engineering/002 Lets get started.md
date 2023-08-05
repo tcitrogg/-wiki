@@ -2,7 +2,7 @@
 title: Let's get started!
 description: Starting on the journey to become a Python engineering
 thumbnail: ""
-author: bnierimi
+author: g/bnierimi
 contact:
   - https://twitter.com/bnierimi
   - https://instagram.com/bnierimi
@@ -11,6 +11,7 @@ published: true
 topics:
   - python
   - engineering
+  - programming
   - course
   - bnierimi
 date: '04 Aug 2023'

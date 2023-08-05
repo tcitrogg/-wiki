@@ -1,7 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+	import { fly, fade, scale, slide } from 'svelte/transition';
   import type { Post } from "$lib/types";
   import DomainsDir from "./DomainsDir.svelte";
+    import SearchSection from './SearchSection.svelte';
   
   export let data: {posts: Post[]};
 
@@ -32,7 +34,6 @@
     
     return [...new Set(domains)]
   }
-	// onMount(() => getDomains());
 
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70"
   const focusWithinStyle = "focus-within:outline-none focus-within:ring-1 focus-within:ring-blue-600/70"
@@ -40,12 +41,8 @@
 </script>
 
 <aside
-  class="w-full h-full flex flex-col space-y-1 py-2 md:py-1.5"
->
-  <h3 class="font-medium px-4 my-2 opacity-70">Articles</h3>
-
-  <div class="overflow-y-auto space-y-2 px-">
-    <DomainsDir {norms} domains={getDomains()} posts={data.posts}/>
-  </div>
-
+  class="w-full h-full flex flex-col py-2 md:py-1.5 overflow-y-auto relative"
+  >
+  <SearchSection {data}/>
+  <DomainsDir {norms} domains={getDomains()} posts={data.posts}/>
 </aside>

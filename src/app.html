@@ -19,5 +19,9 @@
 		<script src="%sveltekit.assets%/lib/flowbite/flowbite.min.js"></script>
 		<script src="%sveltekit.assets%/app.js"></script>
 		<!-- <script src="%sveltekit.assets%/lib/easymde/easymde.min.js"></script> -->
+		<script>
+			let vh = window.innerHeight * 0.01;
+			document.documentElement.style.setProperty("--vh", `${vh}px`);
+		</script>
 	</body>
 </html>

@@ -23,27 +23,36 @@
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-700/70"
 </script>
 
-<!-- ~folders -->
-{#each domains as item, index}
-  <div class={`rounded- ${item.isOpen ? "hover:bg-transparent dark:hover:bg-transparent" : "hover:bg-zinc-300dark:hover:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700" } `}>
-    <button class={`${focusStyle} w-full px-4 py-1 text-left flex items-center justify-between space-x-2 ${item.isOpen ? "bg-zinc-300dark:bg-zinc-800 bg-zinc-200 dark:bg-zinc-700" : ""}`} on:click={() => toggleAccordion(index)}>
-      <span class="font-medium">
-        {item.title}
-      </span>
-      <i class={`icon icon-${item.isOpen ? "ic_fluent_chevron_down_20_regular opacity-80" : "ic_fluent_chevron_right_20_regular opacity-30"} flex text-lg`}></i>
-    </button>
-
-    {#if item.isOpen}
-      <div class="relative">
-        <div class="bg-zinc-400 dark:bg-zinc-700 md:bg-zinc-300 md:dark:bg-zinc-600 w-0.5 h-full absolute top-0 left-2"></div>
-          <ListOfRows data={getEachDomainContent(item.title)}/>
-      </div>
-    {/if}
+<div class="w-full h-full space-y-5">
+  <!-- ~folders -->
+  <div class="w-full space-y-1">
+    <h3 class="font-medium text-lg px-4 my-2 opacity-70 sticky left-0 top-0">Domains</h3>
+    {#each domains as item, index}
+      <div class={`rounded- ${item.isOpen ? "hover:bg-transparentdark:hover:bg-transparent" : "hover:bg-zinc-300 md:hover:bg-zinc-200 dark:hover:bg-zinc-700" } `}>
+        <button class={`${focusStyle} w-full px-2 py-1 text-left flex items-center justify-between ${item.isOpen ? "bg-zinc-300 dark:bg-zinc-700" : ""}`} on:click={() => toggleAccordion(index)}>
+          <div class="flex items-center space-x-1.5">
+            <i class="icon icon-ic_fluent_folder_20_regular flex text-xl rounded-full opacity-80 -rotate-90"></i>
+            <span class="font-medium">
+              {item.title}
+            </span>
+          </div>
+          <i class={`icon icon-${item.isOpen ? "ic_fluent_chevron_down_20_regular opacity-80" : "ic_fluent_chevron_right_20_regular opacity-50"} flex text-lg`}></i>
+        </button>
     
+        {#if item.isOpen}
+          <div class="relative">
+            <div class="bg-zinc-400 dark:bg-zinc-700 md:bg-zinc-300 md:dark:bg-zinc-600 w-0.5 h-full absolute top-0 left-2"></div>
+              <ListOfRows data={getEachDomainContent(item.title)} isInDomain={true}/>
+          </div>
+        {/if}
+        
+      </div>
+    {/each}
   </div>
-{/each}
-
-<!-- ~files -->
-<ListOfRows data={norms}/>
-<!-- {#each norms as item, index}
-{/each} -->
+  
+  <!-- ~files -->
+  <div class="w-full">
+    <h3 class="font-medium text-lg px-4 my-2 opacity-70 sticky left-0 top-0">Articles</h3>
+    <ListOfRows data={norms}/>
+  </div>
+</div>

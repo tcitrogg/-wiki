@@ -17,7 +17,7 @@
   <title>{title}</title>
   <meta name="description" content={description}>
   <meta name="keywords" content={keywords}>
-  <meta name="author" content={`y/${yonko}`}>
+  <meta name="author" content={`g/${yonko}`}>
 </svelte:head>
 
 <section class="w-full h-mobileScreen md:h-screen relative font-sans bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-900 text-zinc-700 dark:text-zinc-200 scrollbar overflow-x-hidden flex flex-col">
@@ -44,10 +44,10 @@
   <div class="w-full h-[93%] flex">
     
     <!-- side nav bar -->
-    <section class="hiddenmd: flex flex-col justify-between items-center h-full pb-2 px-1.5 bg-zinc-200dark:bg-zinc-800 border-rborder-r-zinc-300dark:border-r-zinc-700">
+    <section class="hiddenmd: flex flex-col justify-between items-center h-full pb-1.5 px-1.5 bg-zinc-200dark:bg-zinc-800 border-rborder-r-zinc-300dark:border-r-zinc-700">
       
       <div class="flex flex-col space-y-2">
-        <a href="/" data-tooltip-target={`side-nav-bar-1`} data-tooltip-placement="right" class={`${focusStyle} p-2 bg-blue-500/10 rounded relative`}>
+        <a href="/" data-tooltip-target={`side-nav-bar-1`} data-tooltip-placement="right" class={`${focusStyle} p-2 bg-blue-700/10 rounded relative`}>
           <i class={`icon icon-ic_fluent_home_20_filled flex text-2xl text-${colors[1]}`}></i>
           <Indicator/>
         </a>
@@ -68,7 +68,11 @@
         </button>
         <Tooltip title={"GitHub repo"} id={"side-nav-bar-5"}/> -->
         
-        <a href="/search" data-tooltip-target={`side-nav-bar-3`} data-tooltip-placement="right" class={`${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded`}>
+        <button data-drawer-target="search-drawer" data-drawer-show="search-drawer" data-drawer-backdrop="false" aria-controls="search-drawer" data-tooltip-target={`side-nav-bar-3`} data-tooltip-placement="right" class={`hidden md:block ${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded`}>
+          <i class={`icon icon-ic_fluent_search_20_regular flex text-2xl opacity-70`}></i>
+        </button>
+        
+        <a href="/search" data-tooltip-target={`side-nav-bar-3`} data-tooltip-placement="right" class={`md:hidden block ${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded`}>
           <i class={`icon icon-ic_fluent_search_20_regular flex text-2xl opacity-70`}></i>
         </a>
         <Tooltip title={"Search /Wiki"} id={"side-nav-bar-3"}/>
@@ -84,10 +88,10 @@
         </a>
         <Tooltip title={"Bnierimi's Page"} id={"side-nav-bar-4"}/>
         
-        <button data-tooltip-target={`side-nav-bar-5`} data-tooltip-placement="right" class={`${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded`}>
+        <!-- <button data-tooltip-target={`side-nav-bar-5`} data-tooltip-placement="right" class={`${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded`}>
           <i class={`icon icon-ic_fluent_settings_20_regular flex text-2xl opacity-70`}></i>
         </button>
-        <Tooltip title={"Settings"} id={"side-nav-bar-5"}/>
+        <Tooltip title={"Settings"} id={"side-nav-bar-5"}/> -->
       </div>
     </section>
   
@@ -102,7 +106,7 @@
 
         <section class="w-full lg:w-9/12 md:w-8/12 h-full md:py-2 md:pl-2">
     
-          <div class={`${focusStyle} w-full h-full flex flex-col overflow-y-auto rounded-tl-md md:rounded-md md:pb-20 `}>
+          <div class={`${focusStyle} w-full h-full flex flex-col rounded-tl-md md:rounded-md md:pb-20 relative overflow-y-auto`}>
             <slot/>
           </div>
         </section>

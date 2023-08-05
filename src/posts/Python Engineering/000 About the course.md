@@ -2,7 +2,7 @@
 title: About the course
 description: A short note about the Python Engineering course.
 thumbnail: ""
-author: bnierimi
+author: g/bnierimi
 contact:
   - https://twitter.com/bnierimi
   - https://instagram.com/bnierimi
@@ -11,6 +11,7 @@ published: true
 topics:
   - python
   - engineering
+  - programming
   - course
   - bnierimi
 date: '03 Aug 2023'

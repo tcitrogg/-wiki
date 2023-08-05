@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { fly, fade, scale, slide } from 'svelte/transition';
-  import ListOfRows from "$lib/components/ListOfRows.svelte";
+  import ListOfRows from "./ListOfRows.svelte";
   import type { Post } from "$lib/types";
 
 	import { onMount } from 'svelte';
-  import TopicsTag from "$lib/components/TopicsTag.svelte";
-    import EmptyLabel from '$lib/components/EmptyLabel.svelte';
+  import TopicsTag from "./TopicsTag.svelte";
+    import EmptyLabel from './EmptyLabel.svelte';
 	
   export let data: any;
 	
@@ -69,9 +69,15 @@
   const noFocusStyle = "focus:outline-none focus:ring-0"
 </script>
 
-<section transition:slide="{{ duration: 300, axis:"x" }}" class={`w-full h-full space-y-1 bg-zinc-200 md:bg-zinc-100 dark:bg-zinc-800 md:dark:bg-zinc-800 md:rounded-md`}>
+<section transition:slide="{{ duration: 300, axis:"x" }}" id="search-drawer" tabindex="-1" aria-labelledby="search-drawer-label" class={`hidden md:block absolute z-40 top-0 left-0 transition-transform -translate-x-full w-full h-full space-y-1 bg-zinc-200 md:bg-zinc-100 dark:bg-zinc-800 md:dark:bg-zinc-800 md:rounded-md`}>
   <div class="flex items-center justify-between px-4">
     <h3 id="search-drawer-label" class="font-medium text-lg my-3 opacity-70 sticky left-0 top-0">Search</h3>
+
+    <div class="">
+      <button title="Minimize" data-drawer-hide="search-drawer" aria-controls="search-drawer" class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
+        <i aria-hidden="true" class="icon icon-ic_fluent_chevron_left_20_regular flex text-2xl"></i>
+      </button>
+    </div>
   </div>
 
   <div class="space-y-3">

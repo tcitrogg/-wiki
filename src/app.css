@@ -4,14 +4,6 @@
 
 
 /* t/bnierimi */
-.ink.ink-mde {
-  border: transparent;
-}
-
-.ink-mde .ink-mde-details {
-  visibility: hidden;
-}
-
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -40,6 +32,37 @@
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
+
+
+.ink.ink-mde {
+  border: transparent;
+}
+
+.ink-mde .ink-mde-details {
+  visibility: hidden;
+}
+
+:is(.ͼ3 .cm-content) {
+  caret-color: rgb(29 78 216);
+}
+
+/* cm-editor  ͼ3 ͼ1l  */
+.ͼ1.ink-mde-container{
+  border-left: 0.125rem solid rgba(29, 78, 216, 0.3);
+  padding-left: 1rem;
+  transition: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.ͼ1.cm-focused.ink-mde-container{
+  outline: transparent;
+  border-left-color: rgba(29, 78, 216, 0.8);
+}
+/* :is(.dark .ͼ3 .cm-content) {
+  caret-color: rgb(228 228 231);
+} */
+
 
 /* 
 .prose :is(h2, h3, h4, h5, h6) {

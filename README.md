@@ -64,7 +64,7 @@ fx prompt(text:str) -> None{
 - [%] add a `writer` with `preview` by the side
 - [ ] fetch Wiki articles from a GitHub repo everyone can access and add License and Policy and Code of Conduct
 - [ ] fix the download Wiki articles
-- [ ] fix search page
+- [x] fix search page
 - [ ] fix the side nav bar
 - [ ] add table of contents
 

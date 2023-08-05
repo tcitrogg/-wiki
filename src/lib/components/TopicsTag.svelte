@@ -5,7 +5,7 @@
   export let selectedTopic: string = "";
 </script>
 
-<select name="menu" id="menu" bind:value={selectedTopic} class="bg-zinc-200 dark:bg-zinc-900 rounded-full border-none px-3 py-1 text-sm">
+<select name="menu" id="menu" bind:value={selectedTopic} class="bg-zinc-300 md:bg-zinc-200 dark:bg-zinc-900/50 rounded-full border-none px-3 py-1 text-sm">
   <!-- <option disabled selected value="">Select a language.</option> -->
   <option value="" disabled selected>Topics</option>
   <option value="all">All</option>

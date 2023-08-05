@@ -13,7 +13,7 @@ export async function load({ params, url }: any) {
 
 		return {
 			content: post.default,
-			meta: post.metadata,
+			meta: {...post.metadata, pathId},
 			paramsId: params.id
 		}
 	} catch (e) {

@@ -5,10 +5,17 @@
   import Aside from "$lib/components/Aside.svelte";
   import Mklogo from "$lib/components/Trogg/Mklogo.svelte";
   import Bnapp from "$lib/components/Bnapp.svelte";
-    import ThemeBtn from '$lib/components/ThemeBtn.svelte';
-    import Tooltip from '$lib/components/Tooltip.svelte';
+  import ThemeBtn from '$lib/components/ThemeBtn.svelte';
+  import Tooltip from '$lib/components/Tooltip.svelte';
 
 	export let data: {posts: Post[]};
+  let isSearchOpen: boolean = false;
+
+  const handleSearchOpen = ()=>{
+    isSearchOpen = !isSearchOpen
+    console.log(isSearchOpen)
+    return isSearchOpen
+  }
 
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70";
   const focusWithinStyle =
@@ -44,7 +51,7 @@
       </div> -->
       
       <div class="w-full h-full bg-zinc-200 dark:bg-zinc-800 rounded-tl-md">
-        <Aside {data}/>
+        <Aside {data} {isSearchOpen}/>
       </div>
       
       <!-- btm bar -->
