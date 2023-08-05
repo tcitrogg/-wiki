@@ -39,11 +39,11 @@
 <!-- <section class="p-1"></section> -->
 <!-- {#if isReady}
 {/if} -->
-  <main transition:slide="{{ duration: 200 }}" class={`${isSideTab ? "w-full" : "w-full md:w-11/12 lg:w-10/12 mx-auto" } min-h-full md:pr-2 rounded-md relative flex space-x-2`}>
+  <main transition:slide="{{ duration: 200 }}" class={`${isSideTab ? "w-full" : "w-full md:w-11/12 lg:w-10/12 mx-auto" } h-full md:pr-2 rounded-md relative flex space-x-2`}>
 
     <!-- display content -->
-    <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-full min-h-screen relative flex flex-col bg-zinc-300 dark:bg-zinc-800 md:bg-zinc-200 rounded-tl-md md:rounded-md pb-10`}>
-      <h2 class="w-full lg:w-10/12 lg:mx-auto font-medium text-lg px-4 py-3 sticky top-0 z-40 bg-zinc-300 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-tl-md">
+    <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-fit min-h-screen relative flex flex-col bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-tl-md md:rounded-md pb-10`}>
+      <h2 class="w-full lg:w-10/12 lg:mx-auto font-medium text-lg px-4 py-3 sticky top-0 z-40 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-tl-md">
         <a href="/" class="">
           <span class="text-blue-700">/wiki</span>
         </a>
@@ -97,7 +97,7 @@
       <div on:click={handleSideTab} class="w-full h-full bg-transparent/30 absolute top-0 left-0 md:rounded-md lg:rounded-r-lg"></div>
 
       <!-- side info tab -->
-      <section class={`w-11/12 md:w-full h-full fixed top-0 right-0 md:relative py-3 px-3 bg-zinc-100 dark:bg-zinc-800 shadow-md md:border md:border-zinc-300 dark:md:border-zinc-700 md:shadow-none md:rounded-md flex flex-col justify-between space-y-14`}>
+      <section class={`w-11/12 md:w-full h-full fixed top-0 right-0 md:relative py-3 px-3 bg-zinc-100 dark:bg-zinc-900 md:dark:bg-zinc-800 shadow-md md:border md:border-zinc-300 dark:md:border-zinc-700 md:shadow-none md:rounded-md flex flex-col justify-between space-y-14`}>
         <div class="text-sm space-y-3">
           <div class="space-y-1">
             <p class="font-medium text-lg block mb-2">
@@ -152,9 +152,7 @@
                   <!-- <div class="absolute top-0 left-0.5 border-l-2 border-l-zinc-200 dark:border-l-zinc-800 h-full rounded-full"></div> -->
                   {#if data.meta.topics.length > 0}
                     {#each data.meta.topics as each_topic}
-                      <a href={`/topics/${each_topic}`} class={`${focusStyle} rounded-xl bg-blue-700/20 hover:bg-blue-700 text-blue-700 hover:text-blue-200 mx-0.5 my-0.5 py-0.5 px-3 font-medium`}>
-                        {each_topic}
-                      </a>
+                      <Badge link={`/topics/${each_topic}`} text={each_topic}/>
                     {/each}
                   {:else}
                     <EmptyLabel text="No topic"/>

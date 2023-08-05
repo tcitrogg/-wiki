@@ -28,11 +28,11 @@
 </script>
 
 <!-- <input type="checkbox" checked={isDarkMode} on:click={handleMode} name="theme-toggle" id="theme-toggle"/> -->
-<button data-tooltip-target={`side-nav-bar-mode-btn`} data-tooltip-placement="right" type="button" on:click={handleMode} class={`p-0.5 relative ${isDarkMode ? "bg-blue-700 hover:bg-blue-600" : " bg-gray-300 dark:bg-zinc-800 hover:bg-transparent/10 dark:hover:bg-zinc-700/70"} rounded-full focus:outline-none focus:ring-1 focus:ring-blue-600 overflow-hidden`}>
+<button data-tooltip-target={`mode-btn`} data-tooltip-placement="right" type="button" on:click={handleMode} class={`p-0.5 relative ${isDarkMode ? "bg-blue-700 hover:bg-blue-600" : " bg-gray-300 dark:bg-zinc-800 hover:bg-transparent/10 dark:hover:bg-zinc-700/70"} rounded-full focus:outline-none focus:ring-1 focus:ring-blue-600 overflow-hidden`}>
 {#if isDarkMode}
-	<i transition:slide class="relative icon icon-ic_fluent_weather_sunny_20_regular flex text-xl rounded-full text-zinc-100 p-0.5"></i>
+	<i transition:slide class="relative icon icon-ic_fluent_weather_sunny_20_regular flex text-xl rounded-full text-zinc-100 p-0.5 justify-end"></i>
 {:else}
 	<i transition:slide class="relative icon icon-ic_fluent_weather_moon_20_regular flex text-xl rounded-full p-0.5"></i>
 {/if}
 </button>
-<Tooltip title={isDarkMode ? "Light mode" : "Dark mode"} id={"side-nav-bar-mode-btn"}/>
+<Tooltip title={isDarkMode ? "Light mode" : "Dark mode"} id={"mode-btn"}/>

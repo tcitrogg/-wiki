@@ -20,7 +20,7 @@
   <meta name="author" content={`y/${yonko}`}>
 </svelte:head>
 
-<section class="w-full h-screen relative font-sans bg-zinc-200 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-200 scrollbar overflow-hidden flex flex-col">
+<section class="w-full h-mobileScreen md:h-screen relative font-sans bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-900 text-zinc-700 dark:text-zinc-200 scrollbar overflow- flex flex-col">
 
   <!-- top bar -->
   <div class={`w-full h-[6%] flex bg-${colors[1]}border-bborder-b-zinc-200dark:border-b-zinc-800`}>
@@ -41,7 +41,7 @@
     </nav>
   </div>
 
-  <div class="w-full h-full md:h-[94%] flex">
+  <div class="w-full h-[94%] flex">
     
     <!-- side nav bar -->
     <section class="hiddenmd: flex flex-col justify-between items-center h-full py-2 px-1.5 bg-zinc-200dark:bg-zinc-800 border-rborder-r-zinc-300dark:border-r-zinc-700">
@@ -68,34 +68,37 @@
         </button>
         <Tooltip title={"GitHub repo"} id={"side-nav-bar-5"}/> -->
         
-        <!-- <button data-tooltip-target={`side-nav-bar-4`} data-tooltip-placement="right" class={`${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded`}>
-          <i class={`icon icon-ic_fluent_text_bullet_list_square_20_regular flex text-2xl opacity-70`}></i>
-        </button>
-        <Tooltip title={"Categories"} id={"side-nav-bar-4"}/> -->
-        
         <a href="/search" data-tooltip-target={`side-nav-bar-3`} data-tooltip-placement="right" class={`${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded`}>
           <i class={`icon icon-ic_fluent_search_20_regular flex text-2xl opacity-70`}></i>
         </a>
         <Tooltip title={"Search /Wiki"} id={"side-nav-bar-3"}/>
         
       </div>
-
+      
       <div class="flex flex-col space-y-2">
-        <ThemeBtn />
+        <a href="https:/bnierimi.vercel.app" data-tooltip-target={`side-nav-bar-4`} data-tooltip-placement="right" class={`${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded`}>
+          <i class={`icon icon-ic_fluent_person_20_regular flex text-2xl opacity-70`}></i>
+        </a>
+        <Tooltip title={"Bnierimi's Page"} id={"side-nav-bar-4"}/>
+        
+        <div class="flex items-center justify-center">
+          <ThemeBtn />
+        </div>
       </div>
     </section>
   
     <!-- <div class="lg:container lg:mx-auto h-full flex"> -->
-    <div class="w-full h-full md:py- md:pr-2">
+    <div class="w-full h-full md:pr-2">
 
-      <div class="w-full h-full bg-zinc-00 dark:bg-zinc-00 bg-zinc-100 dark:bg-zinc-900 md:dark:bg-zinc-800 rounded-t flex lg:divide-x-2 lg:divide-zinc-200 dark:lg:divide-zinc-900">
+      <div class="w-full h-full bg-zinc-200 md:bg-zinc-100 dark:bg-zinc-800 md:dark:bg-zinc-800 rounded-t-md md:rounded-md flex md:divide-x-2 md:divide-zinc-200 dark:md:divide-zinc-900">
 
         <section class="w-full lg:w-3/12 md:w-4/12 h-full md:block hidden">
           <Aside {data}/>
         </section>
+
         <section class="w-full lg:w-9/12 md:w-8/12 h-full md:py-2 md:pl-2">
     
-          <div class={`${focusStyle} w-full h-full flex flex-col overflow-y-auto md:rounded-md md:pb-20`}>
+          <div class={`${focusStyle} w-full h-full flex flex-col overflow-y-auto rounded-tl-md md:rounded-md md:pb-20 `}>
             <slot/>
           </div>
         </section>

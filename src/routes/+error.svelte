@@ -7,8 +7,8 @@
 
 <section class="w-full h-full flex flex-col justify-between">
 
-  <div class="hidden opacity-100md:opacity-0 w-11/12 md:w-7/12 mx-auto py-4 text-lg">
-    <Bnapp name={"Wiki"}/>
+  <div class="opacity-100md:opacity-0 w-11/12 md:w-7/12 mx-auto py-4 text-lg">
+    <!-- <Bnapp name={"Wiki"}/> -->
   </div>
   <div class="w-10/12 md:w-7/12 mx-auto md:flex divide-x divide-transparent/20 dark:divide-white/20 space-x-1 md:space-x-4">
     <h2 class="font-medium text-4xl">{$page.status}</h2>

@@ -43,7 +43,7 @@
         </nav>
       </div> -->
       
-      <div class="w-full h-full bg-zinc-300 dark:bg-zinc-800 rounded-tl-md">
+      <div class="w-full h-full bg-zinc-200 dark:bg-zinc-800 rounded-tl-md">
         <Aside {data}/>
       </div>
       
@@ -65,7 +65,7 @@
       </div>
     </section>
     
-    <section class="w-full h-full hidden md:flex flex-col items-center justify-center space-y-2">
+    <section class="w-full h-full hidden md:flex flex-col items-center justify-center space-y-2 md:mt-10">
       <Mklogo title={"Wk"}/>
       <h2 class="font-medium text-xl">
         <Bnapp name="Wiki"/>

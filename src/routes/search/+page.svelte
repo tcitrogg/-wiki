@@ -66,8 +66,10 @@
   const noFocusStyle = "focus:outline-none focus:ring-0";
 </script>
 
-<div class="w-full h-full bg-zinc-300 dark:bg-zinc-800 rounded-tl-md space-y-1 py-2 md:py-0">
-	<h3 class="font-medium px-4 my-2 opacity-70">Search</h3>
+<div class="md:pr-2">
+  <div class="w-full h-full bg-zinc-200 dark:bg-zinc-800 md:bg-transparent rounded-tl-md md:rounded-md space-y-1 py-2 md:py-0">
+    <h3 class="font-medium px-4 my-2 opacity-70">Search</h3>
+  </div>
 </div>
 <!-- <div class="w-full flex items-center justify-between px-3 pt-1 md:px-4">
       <p class="font-medium text-base text-blue-700 block mb-2 -space-x-0.5">

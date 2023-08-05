@@ -63,8 +63,10 @@ fx prompt(text:str) -> None{
 - [?] also list similar articles in the same category with the currently viewed one
 - [%] add a `writer` with `preview` by the side
 - [ ] fetch Wiki articles from a GitHub repo everyone can access and add License and Policy and Code of Conduct
-- [ ] and fix the download Wiki articles
-- [ ] and fix search page
+- [ ] fix the download Wiki articles
+- [ ] fix search page
+- [ ] fix the side nav bar
+- [ ] add table of contents
 
 
 ---
