@@ -20,10 +20,10 @@
   <meta name="author" content={`y/${yonko}`}>
 </svelte:head>
 
-<section class="w-full h-mobileScreen md:h-screen relative font-sans bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-900 text-zinc-700 dark:text-zinc-200 scrollbar overflow- flex flex-col">
+<section class="w-full h-mobileScreen md:h-screen relative font-sans bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-900 text-zinc-700 dark:text-zinc-200 scrollbar overflow-x-hidden flex flex-col">
 
   <!-- top bar -->
-  <div class={`w-full h-[6%] flex bg-${colors[1]}border-bborder-b-zinc-200dark:border-b-zinc-800`}>
+  <div class={`w-full h-[7%] flex bg-${colors[1]}border-bborder-b-zinc-200dark:border-b-zinc-800`}>
     <nav class="w-full mx-auto py-1.5 px-5 flex items-center justify-between bg-green-">
 
       <section class="h-full flex items-center space-x-">
@@ -41,10 +41,10 @@
     </nav>
   </div>
 
-  <div class="w-full h-[94%] flex">
+  <div class="w-full h-[93%] flex">
     
     <!-- side nav bar -->
-    <section class="hiddenmd: flex flex-col justify-between items-center h-full py-2 px-1.5 bg-zinc-200dark:bg-zinc-800 border-rborder-r-zinc-300dark:border-r-zinc-700">
+    <section class="hiddenmd: flex flex-col justify-between items-center h-full pb-2 px-1.5 bg-zinc-200dark:bg-zinc-800 border-rborder-r-zinc-300dark:border-r-zinc-700">
       
       <div class="flex flex-col space-y-2">
         <a href="/" data-tooltip-target={`side-nav-bar-1`} data-tooltip-placement="right" class={`${focusStyle} p-2 bg-blue-500/10 rounded relative`}>
@@ -73,6 +73,9 @@
         </a>
         <Tooltip title={"Search /Wiki"} id={"side-nav-bar-3"}/>
         
+        <div class="flex items-center justify-center">
+          <ThemeBtn />
+        </div>
       </div>
       
       <div class="flex flex-col space-y-2">
@@ -81,9 +84,10 @@
         </a>
         <Tooltip title={"Bnierimi's Page"} id={"side-nav-bar-4"}/>
         
-        <div class="flex items-center justify-center">
-          <ThemeBtn />
-        </div>
+        <button data-tooltip-target={`side-nav-bar-5`} data-tooltip-placement="right" class={`${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded`}>
+          <i class={`icon icon-ic_fluent_settings_20_regular flex text-2xl opacity-70`}></i>
+        </button>
+        <Tooltip title={"Settings"} id={"side-nav-bar-5"}/>
       </div>
     </section>
   
