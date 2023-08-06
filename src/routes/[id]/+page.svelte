@@ -16,7 +16,7 @@
 
 	export let data
   const link: string = data.meta.pathId
-    ? `${url}${data.paramsId}?fd=${data.meta.pathId}`
+    ? `${url}${data.paramsId}?fd=${data.meta.pathId.replace(" ", "%20")}`
     : `${url}${data.paramsId}`
 
   let isSideTab: boolean = true;
@@ -71,7 +71,7 @@
         <CopyBtn text={link}/>
 
         <button data-tooltip-target={`dwn-page-btn`} data-tooltip-placement="bottom" on:click={handleSideTab} class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
-          <i class="icon icon-ic_fluent_arrow_enter_20_regular rotate-90 flex text-xl"></i>
+          <i class="icon icon-ic_fluent_arrow_download_20_regular flex text-xl"></i>
         </button>
         <Tooltip title={"Download this page"} id={"dwn-page-btn"}/>
 
@@ -141,7 +141,7 @@
             <span class="pt-1">{formatDate(data.meta.date)}</span>
           </p>
           <p title="Published" class="flex items-center space-x-2">
-            <i class="icon icon-ic_fluent_arrow_exit_20_regular -rotate-90 flex text-xl p-1 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-300/50 md:dark:bg-zinc-700/50 rounded-full"></i>
+            <i class="icon icon-ic_fluent_arrow_upload_20_regular flex text-xl p-1 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-300/50 md:dark:bg-zinc-700/50 rounded-full"></i>
             <Badge text={`${data.meta.published}`}/>
           </p>
           <div class="">

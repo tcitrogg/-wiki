@@ -17,5 +17,9 @@ export const getPath = (string: string)=>{
 export const mkLink = (id:string, path:string): string=>{
   const fd = getPath(path)
   const endsMd = fd.endsWith(".md")
-  return endsMd ? `/${id}` : `/${id}?fd=${fd}`
+  return endsMd ? `/${id}` : `/${id}?fd=${fd.replace(" ", "%20")}`
+}
+
+export const genRandomColor = ()=>{
+  return `#${Math.random().toString(16).slice(-6)}`
 }

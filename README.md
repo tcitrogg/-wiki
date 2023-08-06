@@ -77,6 +77,7 @@ fx prompt(text:str) -> None{
 - [x] fix search page
 - [ ] fix the side nav bar
 - [ ] add table of contents
+- [ ] fix the space between domain titles replace with %20 or something else
 
 
 ---
