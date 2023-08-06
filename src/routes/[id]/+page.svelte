@@ -41,7 +41,7 @@
 <main transition:slide="{{ duration: 200 }}" class={`${isSideTab ? "w-full" : "w-full lg:w-10/12 mx-auto" } h-fit md:pr-2 rounded-md relative flex space-x-2`}>
 
   <!-- display content -->
-  <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-fit relative flex flex-col bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-tl-md md:rounded-md pb-10`}>
+  <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-fit min-h-screen flex flex-col bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-tl-md md:rounded-md pb-10`}>
     <h2 class="w-full lg:w-10/12 lg:mx-auto font-medium text-lg px-4 pt-3 pb-0 sticky top-0 z-40 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-tl-md">
       <a href="/" class="">
         <span class="text-blue-700">/wiki</span>

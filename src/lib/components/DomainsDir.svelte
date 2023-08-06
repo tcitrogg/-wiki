@@ -26,7 +26,7 @@
 <div class="w-full h-full space-y-5">
   <!-- ~folders -->
   <div class="w-full space-y-1">
-    <h3 class="font-medium text-lg px-4 my-2 opacity-70 sticky left-0 top-0">Domains</h3>
+    <h3 class="font-medium text-base px-4 my-2 opacity-70 sticky left-0 top-0">Domains</h3>
     {#each domains as item, index}
       <div class={`rounded- ${item.isOpen ? "hover:bg-transparentdark:hover:bg-transparent" : "hover:bg-zinc-300 md:hover:bg-zinc-200 dark:hover:bg-zinc-700" } `}>
         <button class={`${focusStyle} w-full px-2 py-1 text-left flex items-center justify-between ${item.isOpen ? "bg-zinc-300 dark:bg-zinc-700" : ""}`} on:click={() => toggleAccordion(index)}>
@@ -52,7 +52,7 @@
   
   <!-- ~files -->
   <div class="w-full">
-    <h3 class="font-medium text-lg px-4 my-2 opacity-70 sticky left-0 top-0">Articles</h3>
+    <h3 class="font-medium text-base px-4 my-2 opacity-70 sticky left-0 top-0">Articles</h3>
     <ListOfRows data={norms}/>
   </div>
 </div>

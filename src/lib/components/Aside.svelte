@@ -3,9 +3,11 @@
 	import { fly, fade, scale, slide } from 'svelte/transition';
   import type { Post } from "$lib/types";
   import DomainsDir from "./DomainsDir.svelte";
-    import SearchSection from './SearchSection.svelte';
+  import SearchSection from './SearchSection.svelte';
+    import ThemeBtn from './ThemeBtn.svelte';
   
   export let data: {posts: Post[]};
+  export let searchId: string;
 
 	let domains: any[] = []; // Folders
 	let norms: any[] = []; // Files not in a folder
@@ -43,6 +45,11 @@
 <aside
   class="w-full h-full flex flex-col py-2 md:py-1.5 overflow-y-auto relative"
   >
-  <SearchSection {data}/>
+  <div class="flex px-4 my-2">
+    <ThemeBtn />
+  </div>
+  <section transition:slide="{{ duration: 300, axis:"x" }}" id={`${searchId}`} tabindex="-1" aria-labelledby={`${searchId}-label`} class={`absolute z-50 top-0 left-0 transition-transform -translate-x-full w-full h-full space-y-1 bg-zinc-200 md:bg-zinc-100 dark:bg-zinc-800 md:dark:bg-zinc-800 md:rounded-md`}>
+    <SearchSection {data} id={searchId}/>
+  </section>
   <DomainsDir {norms} domains={getDomains()} posts={data.posts}/>
 </aside>

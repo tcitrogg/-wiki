@@ -9,13 +9,13 @@
   import Tooltip from '$lib/components/Tooltip.svelte';
 
 	export let data: {posts: Post[]};
-  let isSearchOpen: boolean = false;
+  // let isSearchOpen: boolean = false;
 
-  const handleSearchOpen = ()=>{
-    isSearchOpen = !isSearchOpen
-    console.log(isSearchOpen)
-    return isSearchOpen
-  }
+  // const handleSearchOpen = ()=>{
+  //   isSearchOpen = !isSearchOpen
+  //   console.log(isSearchOpen)
+  //   return isSearchOpen
+  // }
 
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-600/70";
   const focusWithinStyle =
@@ -50,8 +50,9 @@
         </nav>
       </div> -->
       
-      <div class="w-full h-full bg-zinc-200 dark:bg-zinc-800 rounded-tl-md">
-        <Aside {data} {isSearchOpen}/>
+      <!-- <Aside {data} {isSearchOpen}/> -->
+      <div class="w-full h-full relative bg-zinc-200 dark:bg-zinc-800 rounded-tl-md">
+        <Aside {data} searchId={"search-drawer"}/>
       </div>
       
       <!-- btm bar -->

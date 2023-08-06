@@ -10,14 +10,23 @@
   <option value="" disabled selected>Topics</option>
   <option value="all">All</option>
   {#each topics.sort() as each_topic}
-    <option value={each_topic}>
-      {each_topic}
-    </option>
+  <option value={each_topic}>
+    {each_topic}
+  </option>
   {/each}
 </select>
-
 <!-- <div class="w-full overflow-x-auto text-sm flex relative space-x-2 py-2">
-  <ul class="grid w-full gap-6 md:grid-cols-2">
+{#each topics.sort() as each_topic}
+  <div>
+    <input value={each_topic} type="radio" id={`${each_topic}-small`} name={`${each_topic}`} class="hidden peer" required>
+    <label for={`${each_topic}-small`} class="inline-flex border cursor-pointer dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600">                           
+      <Badge text={each_topic}/>
+    </label>
+  </div>
+{/each}
+</div> -->
+
+  <!-- <ul class="grid w-full gap-6 md:grid-cols-2">
     {#each categories as each_topic}
     <li>
       <input value={each_topic} type="radio" id="hosting-small" name="hosting" class="hidden peer" required>
@@ -26,5 +35,4 @@
       </label>
     </li>
     {/each}
-  </ul>
-</div> -->
+  </ul> -->
