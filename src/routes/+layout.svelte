@@ -4,22 +4,12 @@
   import { colors } from "$lib/utils";
   import Aside from "$lib/components/Aside.svelte";
   import Bnapp from "$lib/components/Bnapp.svelte";
-  import ThemeBtn from "$lib/components/ThemeBtn.svelte";
   import Indicator from "$lib/components/Indicator.svelte";
   import Tooltip from "$lib/components/Tooltip.svelte";
-  import { title, description, keywords, yonko } from "$lib/config";
-  import SearchSection from "$lib/components/SearchSection.svelte";
 
   export let data: {posts: Post[]};
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-700/70"
 </script>
-
-<svelte:head>
-  <title>{title}</title>
-  <meta name="description" content={description}>
-  <meta name="keywords" content={keywords}>
-  <meta name="author" content={`g/${yonko}`}>
-</svelte:head>
 
 <section class="w-full h-mobileScreen md:h-screen relative font-sans bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-900 text-zinc-700 dark:text-zinc-200 scrollbar overflow-x-hidden flex flex-col">
 

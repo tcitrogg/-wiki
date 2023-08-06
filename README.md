@@ -1,8 +1,18 @@
 # Wiki
 `bn/Wiki` a cookbook for programmers, to setup and help get things up and running...
 
-- *Name:* Wiki
-- *Domain:* Bnierimi :: `bn/`
+- **Name:** Wiki
+- **Developer:** [Radiance E. Babajide @g/bnierimi](https://bnierimi.vercel.app)
+- **Domain:** `bn/`::bnierimi
+- **First appeared:** 28 August 2023
+- **OS:** Web, Linux/Unix, Windows, MacOs, Android, ...
+- **Contacts:**
+  - [Email/bnierimi](mailto:bnierimi@gmail.com)
+  - [Github/bnierimi](https://github.com/bnierimi)
+  - [Twitter/bnierimi](https://twitter.com/bnierimi)
+  - [Instagram/bnierimi](https://instagram.com/bnierimi)
+  - [Threads/bnierimi](https://threads.com/bnierimi)
+  - [LinkedIn/bnierimi](https://www.linkedin.com/in/bnierimi)
 
 This is the format for every post, must be at the top of every article
 ```yml
@@ -71,7 +81,3 @@ fx prompt(text:str) -> None{
 
 ---
 yours `tcitrogg/bnierimi`
-- [Twitter/bnierimi](https://twitter.com/bnierimi)
-- [Github/bnierimi](https://github.com/bnierimi)
-- [Instagram/bnierimi](https://instagram.com/bnierimi)
-- [Threads/bnierimi](https://threads.com/bnierimi)

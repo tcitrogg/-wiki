@@ -2,6 +2,7 @@
 	import { fly, fade, scale, slide } from 'svelte/transition';
   
   import type { Post } from "$lib/types";
+  import { title, description, keywords, yonko } from "$lib/config";
   import Aside from "$lib/components/Aside.svelte";
   import Mklogo from "$lib/components/Trogg/Mklogo.svelte";
   import Bnapp from "$lib/components/Bnapp.svelte";
@@ -22,6 +23,15 @@
     "focus-within:outline-none focus-within:ring-1 focus-within:ring-blue-600/70";
   const noFocusStyle = "focus:outline-none focus:ring-0";
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="og:title" content={title}>
+  <meta name="og:author" content={`g/${yonko}`}>
+  <meta name="og:description" content={description}>
+  <meta name="og:keywords" content={keywords}>
+  <meta name="og:image" content={"./favicon.svg"}>
+</svelte:head>
 
 <section class="w-full h-full md:pr-2">
   <main transition:slide="{{ duration: 200 }}" class="w-full h-full md:rounded">

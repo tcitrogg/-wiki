@@ -16,8 +16,8 @@
 
 	export let data
   const link: string = data.meta.pathId
-                        ? `${url}${data.paramsId}?fd=${data.meta.pathId}`
-                        : `${url}${data.paramsId}`
+    ? `${url}${data.paramsId}?fd=${data.meta.pathId}`
+    : `${url}${data.paramsId}`
 
   let isSideTab: boolean = true;
   $: isSideTabSmScreen = false;
@@ -29,13 +29,14 @@
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-700/70"
 </script>
 
-
 <svelte:head>
   <title>{`bn/Wiki - ${data.meta.title} @${data.meta.author}` || title}</title>
-  <meta name="description" content={data.meta.description || description}>
-  <meta name="keywords" content={`${data.meta.topics}` || keywords}>
+  <meta name="og:title" content={`bn/Wiki - ${data.meta.title} @${data.meta.author}` || title}>
+  <meta name="og:author" content={data.meta.author || `g/${yonko}`}>
+  <meta name="og:description" content={data.meta.description || description}>
+  <meta name="og:keywords" content={`${data.meta.topics}` || keywords}>
   <meta name="datetime" content={formatDate(data.meta.date) || '03 Aug 2023'}>
-  <meta name="author" content={data.meta.author || `g/${yonko}`}>
+  <meta name="og:image" content={data.meta.thumbnail || "./favicon.svg"}>
 </svelte:head>
 
 <main transition:slide="{{ duration: 200 }}" class={`${isSideTab ? "w-full" : "w-full lg:w-10/12 mx-auto" } h-fit md:pr-2 rounded-md relative flex space-x-2`}>
@@ -108,6 +109,7 @@
               </button>
             </div>
           </div>
+
           <summary title="Description" class="flex items-start space-x-2 w-full h-full leading-5
           prose
           prose-headings:text-zinc-700 prose-headings:dark:text-zinc-200 prose-headings:leading-3
@@ -122,6 +124,7 @@
             <!-- <div>{@html data.meta.description}</div> -->
           </summary>
         </div>
+
         <div class="space-y-2 ">
           {#if data.meta.pathId}
             <p title="Domain" class="flex items-start space-x-2">
@@ -173,6 +176,7 @@
     </section>
   </section>
 
+  <!-- lg:minimize side info tab -->
   <div transition:slide="{{ duration: 300, axis:"x" }}" class={`${isSideTab ? "hidden" : "lg:block hidden"} flex justify-end fixed right-2 bottom-5`}>
     <button title="Minimize" on:click={handleSideTab} class={`${focusStyle} p-1 rounded-l-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
       <i class="icon icon-ic_fluent_chevron_left_20_regular flex text-2xl"></i>
