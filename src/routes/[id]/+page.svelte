@@ -3,13 +3,13 @@
   import SvelteMarkdown from 'svelte-markdown'
   // import { onMount } from "svelte";
 	import { formatDate } from '$lib/utils'
-  import { title, description, keywords, url, articleDir, yonko } from "$lib/config";
+  import { title, description, keywords, url, yonko } from "$lib/config";
   import CopyBtn from "$lib/components/CopyBtn.svelte";
   import Badge from "$lib/components/Badge.svelte";
   import EmptyLabel from '$lib/components/EmptyLabel.svelte';
   import MDBoard from '$lib/components/MDBoard.svelte';
   import Tooltip from "$lib/components/Tooltip.svelte";
-  import DownloadBtn from '$lib/components/DownloadBtn.svelte';
+  // import DownloadBtn from '$lib/components/DownloadBtn.svelte';
 
   // For loading...
   // let isReady = false;
@@ -47,13 +47,13 @@
 <main transition:slide="{{ duration: 200 }}" class={`${isSideTab ? "w-full" : "w-full lg:w-10/12 mx-auto" } h-fit md:pr-2 rounded-md relative flex space-x-2`}>
 
   <!-- display content -->
-  <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-fit min-h-screen flex flex-col bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-tl-md md:rounded-md pb-10`}>
-    <h2 class="w-full lg:w-10/12 lg:mx-auto font-medium text-lg px-4 pt-3 pb-0 sticky top-0 z-40 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-tl-md">
+  <section class={`w-full ${isSideTab ? "lg:w-8/12" : ""} h-fit md:min-h-screen flex flex-col bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-tl-md md:rounded-md pb-10`}>
+    <h2 class="w-full lg:w-10/12 lg:mx-auto font-medium text-lg px-4 pt-3 pb-0 sticky top-0 z-40 bg-zinc-200 dark:bg-zinc-800 md:bg-zinc-200 md:dark:bg-zinc-900 rounded-t-md">
       <a href="/" class="">
         <span class="text-blue-700">/wiki</span>
       </a>
       <span class="opacity-50">/</span>
-      <span>{data.meta.title}</span>
+      <span title={data.meta.title} class="">{data.meta.title}</span>
       <!-- <span>{data.each_wknote.title} - {"{data.each_wknote.cryptId}"}</span> -->
     </h2>
 

@@ -9,12 +9,14 @@
 
   export let data: {posts: Post[]};
   const focusStyle = "focus:outline-none focus:ring-1 focus:ring-blue-700/70"
+
+  // console.log(param)
 </script>
 
 <section class="w-full h-mobileScreen md:h-screen relative font-sans bg-zinc-100 dark:bg-zinc-900 md:bg-zinc-200 md:dark:bg-zinc-900 text-zinc-700 dark:text-zinc-200 scrollbar overflow-x-hidden flex flex-col">
 
   <!-- md:top bar -->
-  <nav class="w-full mx-auto md:h-[7%] pt-2 md:pt-0 px-5 hidden md:flex items-center justify-between">
+  <nav class="w-full mx-auto md:h-[7%] py-2 md:pt-0 px-5 flex items-center justify-between">
 
     <section class="h-full flex items-center space-x-">
       <h1 class="font-medium text-base">
@@ -31,24 +33,14 @@
 
   </nav>
 
-  <!-- sm:nav bar  -->
-  <section class="w-full md:hidden flex items-center justify-between px-4 py-2">
-    <div class="flex items-center space-x-3">
-      <h1 class="font-medium text-base">
-        <Bnapp name="Wiki" />
-      </h1>
-    </div>
-  </section>
-
   <div class="w-full h-full md:h-[93%] flex">
     
     <!-- md:nav bar  -->
     <section class="hidden md:flex flex-col justify-between items-center h-full pb-1.5 px-1.5 bg-zinc-200dark:bg-zinc-800 border-rborder-r-zinc-300dark:border-r-zinc-700">
       
       <div class="flex flex-col space-y-2">
-        <a href="/" data-tooltip-target={`side-nav-bar-1`} data-tooltip-placement="right" class={`${focusStyle} p-2 bg-blue-700/10 rounded relative`}>
-          <i class={`icon icon-ic_fluent_home_20_filled flex text-2xl text-${colors[1]}`}></i>
-          <Indicator/>
+        <a href="/" data-tooltip-target={`side-nav-bar-1`} data-tooltip-placement="right" class={`${focusStyle} p-2 hover:bg-zinc-300 dark:hover:bg-zinc-800 opacity-70 hover:opacity-100 rounded`}>
+          <i class={`icon icon-ic_fluent_home_20_regular flex text-2xl`}></i>
         </a>
         <Tooltip title={"Home"} id={"side-nav-bar-1"}/>
         
@@ -98,9 +90,8 @@
   <!-- sm:nav bar  -->
   <section class="w-full md:hidden flex items-center justify-between px-4 py-1.5">
     <div class="flex items-center space-x-4">
-      <a href="/" class={`${focusStyle} p-1.5 rounded relative`}>
-        <i class={`icon icon-ic_fluent_home_20_filled flex text-2xl text-${colors[1]}`}></i>
-        <Indicator isX={true}/>
+      <a href="/" class={`${focusStyle} p-1.5 opacity-70 hover:opacity-100 rounded`}>
+        <i class={`icon icon-ic_fluent_home_20_regular flex text-2xl`}></i>
       </a>
 
       <a href="/wkWriter" class={`${focusStyle} p-1.5 opacity-70 hover:opacity-100 rounded`}>
