@@ -4,6 +4,7 @@ description: About bnierimi/wiki, https://twitter.com/bnierimi.
 thumbnail: ""
 author: g/bnierimi
 contact:
+  - https://bnierimi.vercel.app
   - https://twitter.com/bnierimi
   - https://instagram.com/bnierimi
   - https://threads.net/@bnierimi
@@ -31,3 +32,16 @@ date: '03 Aug 2023'
   - [Threads/bnierimi](https://threads.net/@bnierimi)
   - [LinkedIn/bnierimi](https://www.linkedin.com/in/bnierimi)
 
+
+### Domains
+- Roadmaps
+  - For programming languages
+- Programming
+  - Python
+  - Rust
+- Web devlopment
+  - TypeScript, JavaScript
+- Artificial Intelligence
+- Researchs
+- Design
+etc

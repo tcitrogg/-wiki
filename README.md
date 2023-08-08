@@ -14,7 +14,7 @@
   - [Threads/bnierimi](https://threads.net/@bnierimi)
   - [LinkedIn/bnierimi](https://www.linkedin.com/in/bnierimi)
 
-This is the format for every post, must be at the top of every article
+This is the format for every post, must be at the top of every article:
 ```yml
 ---
 title: About bn/Wiki
@@ -36,7 +36,6 @@ date: '03 Aug 2023'
 ```
 
 Consider this sample:
-
 ```md
 <!-- <place the format above here> -->
 
@@ -71,7 +70,8 @@ fx prompt(text:str) -> None{
 - [x] fix the copy alert and make it better, _not using alert_
 - [x] add error page
 - [%] add a `writer` with `preview` by the side
-- [ ] fix the download Wiki articles
+- [*] fix the download Wiki articles
+  - finished but not sure i should do that
 - [x] fix search page
 - [ ] fix the side nav bar
 - [x] fix the space between domain titles replace with %20 or something else

@@ -1,23 +1,28 @@
 <script lang="ts">
-	import { fly, fade, scale, slide } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
   import SvelteMarkdown from 'svelte-markdown'
   // import { onMount } from "svelte";
-	import { formatDate, mkLink } from '$lib/utils'
-  import { title, description, keywords, url, contacts, yonko } from "$lib/config";
+	import { formatDate } from '$lib/utils'
+  import { title, description, keywords, url, articleDir, yonko } from "$lib/config";
   import CopyBtn from "$lib/components/CopyBtn.svelte";
   import Badge from "$lib/components/Badge.svelte";
   import EmptyLabel from '$lib/components/EmptyLabel.svelte';
   import MDBoard from '$lib/components/MDBoard.svelte';
   import Tooltip from "$lib/components/Tooltip.svelte";
+  import DownloadBtn from '$lib/components/DownloadBtn.svelte';
 
   // For loading...
   // let isReady = false;
 	// onMount(() => isReady = true);
 
 	export let data
-  const link: string = data.meta.pathId
+  $: link = data.meta.pathId
     ? `${url}${data.paramsId}?fd=${data.meta.pathId.replace(" ", "%20")}`
     : `${url}${data.paramsId}`
+
+  $: downloadLink = data.meta.pathId
+    ? `${url}src/articles/${data.meta.pathId.replace(" ", "%20")}/${data.paramsId.replaceAll("-", " ")}.md`
+    : `${url}src/articles/${data.paramsId.replaceAll("-", " ")}.md`
 
   let isSideTab: boolean = true;
   $: isSideTabSmScreen = false;
@@ -55,7 +60,7 @@
     <div class="w-full lg:w-10/12 lg:mx-auto flex items-center justify-between text-sm px-4 py-2">
       <div class="flex items-center space-x-2">
         <span class="opacity-50 italic">from</span>
-        <a href={contacts[0]} class="">
+        <a href={data.meta.contact[0]} class="">
           <div class="rounded-full py-0.5 px-2 bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700 flex items-center justify-center">
             {data.meta.author}
           </div>
@@ -70,10 +75,7 @@
 
         <CopyBtn text={link}/>
 
-        <button data-tooltip-target={`dwn-page-btn`} data-tooltip-placement="bottom" on:click={handleSideTab} class={`${focusStyle} p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
-          <i class="icon icon-ic_fluent_arrow_download_20_regular flex text-xl"></i>
-        </button>
-        <Tooltip title={"Download this page"} id={"dwn-page-btn"}/>
+        <!-- <DownloadBtn url={downloadLink}/> -->
 
         <button data-tooltip-target={`about-page-btn`} data-tooltip-placement="bottom" on:click={handleSideTab} class={`${focusStyle} block lg:hidden p-1 rounded-full bg-zinc-300/50 dark:bg-zinc-700/50 hover:bg-zinc-300 dark:hover:bg-zinc-700`}>
           <i class="icon icon-ic_fluent_info_20_regular flex text-xl"></i>

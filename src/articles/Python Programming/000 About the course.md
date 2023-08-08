@@ -4,6 +4,7 @@ description: A short note about the Python Engineering course.
 thumbnail: ""
 author: g/bnierimi
 contact:
+  - https://bnierimi.vercel.app
   - https://twitter.com/bnierimi
   - https://instagram.com/bnierimi
   - https://threads.net/@bnierimi

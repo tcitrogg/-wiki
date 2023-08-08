@@ -4,6 +4,7 @@ description: The journey about the Strawhat Pirates sailing the seas and how the
 thumbnail: ""
 author: g/bnierimi
 contact:
+  - https://bnierimi.vercel.app
   - https://twitter.com/bnierimi
   - https://instagram.com/bnierimi
   - https://threads.net/@bnierimi
