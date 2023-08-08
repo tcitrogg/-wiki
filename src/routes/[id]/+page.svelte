@@ -30,8 +30,8 @@
 </script>
 
 <svelte:head>
-  <title>{`bn/Wiki - ${data.meta.title} @${data.meta.author}` || title}</title>
-  <meta name="og:title" content={`bn/Wiki - ${data.meta.title} @${data.meta.author}` || title}>
+  <title>{`bnierimi/wiki - ${data.meta.title} @${data.meta.author}` || title}</title>
+  <meta name="og:title" content={`bnierimi/wiki - ${data.meta.title} @${data.meta.author}` || title}>
   <meta name="og:author" content={data.meta.author || `g/${yonko}`}>
   <meta name="og:description" content={data.meta.description || description}>
   <meta name="og:keywords" content={`${data.meta.topics}` || keywords}>

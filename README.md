@@ -1,17 +1,17 @@
 # Wiki
-`bn/Wiki` a cookbook for programmers, to setup and help get things up and running...
+`/Wiki` a cookbook for programmers, to setup and help get things up and running...
 
 - **Name:** Wiki
 - **Developer:** [Radiance E. Babajide @g/bnierimi](https://bnierimi.vercel.app)
-- **Domain:** `bn/`::bnierimi
-- **First appeared:** 28 August 2023
+- **Domain:** bnierimi/
+- **First verse:** 28 August 2023
 - **OS:** Web, Linux/Unix, Windows, MacOs, Android, ...
 - **Contacts:**
   - [Email/bnierimi](mailto:bnierimi@gmail.com)
   - [Github/bnierimi](https://github.com/bnierimi)
   - [Twitter/bnierimi](https://twitter.com/bnierimi)
   - [Instagram/bnierimi](https://instagram.com/bnierimi)
-  - [Threads/bnierimi](https://threads.com/bnierimi)
+  - [Threads/bnierimi](https://threads.net/@bnierimi)
   - [LinkedIn/bnierimi](https://www.linkedin.com/in/bnierimi)
 
 This is the format for every post, must be at the top of every article
@@ -68,17 +68,19 @@ fx prompt(text:str) -> None{
 - [x] do Side info tab responsive design
 - [%] (%) Loading: we need to it look kind of like the real wiki with the way data is displayed
 - [x] add category filter
-- [ ] fix the copy alert and make it better, _not using alert_
+- [x] fix the copy alert and make it better, _not using alert_
 - [x] add error page
-- [?] also list similar articles in the same category with the currently viewed one
 - [%] add a `writer` with `preview` by the side
-- [ ] fetch Wiki articles from a GitHub repo everyone can access and add License and Policy and Code of Conduct
 - [ ] fix the download Wiki articles
 - [x] fix search page
 - [ ] fix the side nav bar
-- [ ] add table of contents
-- [ ] fix the space between domain titles replace with %20 or something else
+- [x] fix the space between domain titles replace with %20 or something else
+- [x] keep writer's content in local storage
 
+### Plus
+- [?] also list similar articles in the same category with the currently viewed one
+- [ ] fetch Wiki articles from a GitHub repo everyone can access and add License and Policy and Code of Conduct
+- [ ] add table of contents
 
 ---
 yours `tcitrogg/bnierimi`

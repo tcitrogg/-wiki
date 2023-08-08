@@ -8,7 +8,7 @@
   import EmptyLabel from './EmptyLabel.svelte';
 	
   export let data: any;
-  export let id: string = "search-drawer";
+  export let id: string = "";
 	
 	let titles: any[] = []; // menu built from articleData
 	let topics: string[] = []; // menu built from articleData

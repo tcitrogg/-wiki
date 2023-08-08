@@ -32,32 +32,11 @@
   </nav>
 
   <!-- sm:nav bar  -->
-  <section class="w-full md:hidden flex items-center justify-between px-4 py-1.5">
+  <section class="w-full md:hidden flex items-center justify-between px-4 py-2">
     <div class="flex items-center space-x-3">
       <h1 class="font-medium text-base">
         <Bnapp name="Wiki" />
       </h1>
-    </div>
-
-    <div class="flex items-center space-x-3">
-      <a href="/" class={`${focusStyle} p-1.5 rounded relative`}>
-        <i class={`icon icon-ic_fluent_home_20_filled flex text-2xl text-${colors[1]}`}></i>
-        <Indicator isX={true}/>
-      </a>
-
-      <a href="/wkWriter" class={`${focusStyle} p-1.5 opacity-70 hover:opacity-100 rounded`}>
-        <i class={`icon icon-ic_fluent_clipboard_text_edit_20_regular flex text-2xl`}></i>
-      </a>
-
-      <a href="/search" class={`${focusStyle} p-1.5 opacity-70 hover:opacity-100 rounded`}>
-        <i class={`icon icon-ic_fluent_search_20_regular flex text-2xl`}></i>
-      </a>
-    </div>
-    
-    <div class="flex items-center space-x-3">
-      <a href="https://bnierimi.vercel.app" class={`${focusStyle} p-1 bg-zinc-300 dark:bg-zinc-800 hover:bg-zinc-200dark:hover:bg-zinc-700 opacity-70 hover:opacity-100 rounded-full`}>
-        <i class={`icon icon-ic_fluent_person_20_regular flex text-2xl`}></i>
-      </a>
     </div>
   </section>
 
@@ -113,5 +92,30 @@
   
     </div>
   </div>
+
+
+
+  <!-- sm:nav bar  -->
+  <section class="w-full md:hidden flex items-center justify-between px-4 py-1.5">
+    <div class="flex items-center space-x-4">
+      <a href="/" class={`${focusStyle} p-1.5 rounded relative`}>
+        <i class={`icon icon-ic_fluent_home_20_filled flex text-2xl text-${colors[1]}`}></i>
+        <Indicator isX={true}/>
+      </a>
+
+      <a href="/wkWriter" class={`${focusStyle} p-1.5 opacity-70 hover:opacity-100 rounded`}>
+        <i class={`icon icon-ic_fluent_clipboard_text_edit_20_regular flex text-2xl`}></i>
+      </a>
+
+      <a href="/search" class={`${focusStyle} p-1.5 opacity-70 hover:opacity-100 rounded`}>
+        <i class={`icon icon-ic_fluent_search_20_regular flex text-2xl`}></i>
+      </a>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="https://bnierimi.vercel.app" class={`${focusStyle} p-1 bg-zinc-300 dark:bg-zinc-800 hover:bg-zinc-200dark:hover:bg-zinc-700 opacity-70 hover:opacity-100 rounded-full`}>
+        <i class={`icon icon-ic_fluent_person_20_regular flex text-2xl`}></i>
+      </a>
+    </div>
+  </section>
 
 </section>

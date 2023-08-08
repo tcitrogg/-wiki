@@ -1,10 +1,25 @@
 <script lang="ts">
+	import { browser } from "$app/environment";
 	import InkMde from 'ink-mde/svelte'
 	import type { Instance } from 'ink-mde'
   
 	// doc
 	let value = `# Yo!
-_Type something..._`
+Type something...
+
+
+_yours kagayaki_`
+
+  const handleChange = ()=>{
+    localStorage.setItem('bnierimiWriterContent', value);
+  }
+  
+  if (browser) {
+    if (localStorage.bnierimiWriterContent || (!("bnierimiWriterContent" in localStorage))) {
+      value = localStorage.bnierimiWriterContent
+		}
+	}
+
 	// reactive option, if this change, the editor will be reconfigured.
 	let isDarkTheme = true
 </script>
@@ -15,6 +30,7 @@ _Type something..._`
 		<h3 class="font-medium text-lg px-4 my-3 opacity-70 sticky left-0 top-0">Writer</h3>
 		<InkMde
 			bind:value
+      on:afterUpdate={handleChange}
 			options={{
 			  interface: {
 				appearance: isDarkTheme ? 'dark' : 'light',

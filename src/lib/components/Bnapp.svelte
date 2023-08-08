@@ -9,7 +9,7 @@
 
 <!-- <a href={`/`} class={`${noFocusStyle} flex rounded-md`}> -->
   <p class={`${style}`}>
-    <span class="opacity-50">bn/</span>
+    <span class="opacity-50">bnierimi/</span>
     <span class="font-medium text-blue-700">{name}</span>
   </p>
 <!-- </a> -->

@@ -6,7 +6,7 @@ author: g/bnierimi
 contact:
   - https://twitter.com/bnierimi
   - https://instagram.com/bnierimi
-  - https://threads.com/bnierimi
+  - https://threads.net/@bnierimi
 published: true
 topics:
   - anime

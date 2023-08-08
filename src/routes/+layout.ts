@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit'
 
 export async function load({ fetch }: any) {
 	try {
-		const response = await fetch('api/posts')
+		const response = await fetch('api/articles')
 		const posts: Post[] = await response.json()
 		return { posts }
 	} catch (e) {

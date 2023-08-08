@@ -8,8 +8,8 @@ export async function load({ params, url }: any) {
   let post: any = {}
 	try {
     pathId === null
-      ? post = await import(`../../posts/${paramsId}.md`)
-      : post = await import(`../../posts/${pathId}/${paramsId}.md`)
+      ? post = await import(`../../articles/${paramsId}.md`)
+      : post = await import(`../../articles/${pathId}/${paramsId}.md`)
 
 		return {
 			content: post.default,

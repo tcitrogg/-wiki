@@ -4,7 +4,8 @@
   import type { Post } from "$lib/types";
   import DomainsDir from "./DomainsDir.svelte";
   import SearchSection from './SearchSection.svelte';
-    import ThemeBtn from './ThemeBtn.svelte';
+  import ThemeBtn from './ThemeBtn.svelte';
+  import { articleDir } from '$lib/config';
   
   export let data: {posts: Post[]};
   export let searchId: string;
@@ -15,7 +16,7 @@
 	// Get all domains
   const getDomains = () => {
     for (let postObj of data.posts) {
-      const p = postObj.path.split("/src/posts")[1]
+      const p = postObj.path.split(articleDir)[1]
       const fd = p.split("/")[1]
       const endsMd = fd.endsWith(".md")
 

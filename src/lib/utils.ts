@@ -1,3 +1,5 @@
+import { articleDir } from "./config"
+
 type DateStyle = Intl.DateTimeFormatOptions['dateStyle']
 
 export function formatDate(date: string, dateStyle: DateStyle = 'full', locales = 'en') {
@@ -10,7 +12,7 @@ export const colors = {
 }
 
 export const getPath = (string: string)=>{
-	const p = string.split("/src/posts")[1]
+	const p = string.split(articleDir)[1]
   return p.split("/")[1]
 }
 
