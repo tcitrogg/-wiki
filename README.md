@@ -2,33 +2,34 @@
 `/Wiki` a cookbook for programmers, to setup and help get things up and running...
 
 - **Name:** Wiki
-- **Developer:** [Radiance E. Babajide @g/bnierimi](https://bnierimi.vercel.app)
-- **Domain:** bnierimi/
+- **Developer:** [Radiance Babajide @tcitrogg](https://bnierimi.vercel.app)
+- **Domain:** tcitrogg/
 - **First verse:** 28 August 2023
-- **OS:** Web, Linux/Unix, Windows, MacOs, Android, ...
+- **Updated** 20 March 2024
+<!-- - **OS:** Web, Linux/Unix, Windows, MacOs, Android, ... -->
 - **Contacts:**
-  - [Email/bnierimi](mailto:bnierimi@gmail.com)
-  - [Github/bnierimi](https://github.com/bnierimi)
-  - [Twitter/bnierimi](https://twitter.com/bnierimi)
-  - [Instagram/bnierimi](https://instagram.com/bnierimi)
-  - [Threads/bnierimi](https://threads.net/@bnierimi)
-  - [LinkedIn/bnierimi](https://www.linkedin.com/in/bnierimi)
+  - [Email/tcitrogg](mailto:tcitrogg@gmail.com)
+  - [Github/tcitrogg](https://github.com/tcitrogg)
+  - [Twitter/tcitrogg](https://twitter.com/tcitrogg)
+  - [Instagram/tcitrogg](https://instagram.com/tcitrogg)
+  - [Threads/tcitrogg](https://threads.net/@tcitrogg)
+  - [LinkedIn/tcitrogg](https://www.linkedin.com/in/tcitrogg)
 
 This is the format for every post, must be at the top of every article:
 ```yml
 ---
 title: About bn/Wiki
-description: About bn/Wiki, https://twitter.com/bnierimi
+description: About bn/Wiki, https://twitter.com/tcitrogg
 thumbnail: ""
-author: bnierimi
+author: tcitrogg
 contact:
-  - https://twitter.com/bnierimi
-  - https://instagram.com/bnierimi
-  - https://threads.com/bnierimi
+  - https://twitter.com/tcitrogg
+  - https://instagram.com/tcitrogg
+  - https://threads.com/tcitrogg
 published: true
 topics:
   - wiki
-  - bnierimi
+  - tcitrogg
   - about
 date: '03 Aug 2023'
 # Thumbnail: <url, e.g. images/image.webp then put that image in the static/images folder>
@@ -45,7 +46,7 @@ date: '03 Aug 2023'
 - [*] fix the download Wiki articles
   - finished but not sure i should do that
 - [x] fix search page
-- [ ] fix the side nav bar
+<!-- - [ ] fix the side nav bar -->
 - [x] fix the space between domain titles replace with %20 or something else
 - [x] keep writer's content in local storage
 
