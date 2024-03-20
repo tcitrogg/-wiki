@@ -2,12 +2,12 @@
 title: One Piece
 description: The journey about the Strawhat Pirates sailing the seas and how their captain Monkey D Luffy set out to become King of the Pirates.
 thumbnail: ""
-author: g/bnierimi
+author: g/tcitrogg
 contact:
   - https://bnierimi.vercel.app
-  - https://twitter.com/bnierimi
-  - https://instagram.com/bnierimi
-  - https://threads.net/@bnierimi
+  - https://twitter.com/tcitrogg
+  - https://instagram.com/tcitrogg
+  - https://threads.net/@tcitrogg
 published: true
 topics:
   - anime

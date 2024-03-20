@@ -35,34 +35,6 @@ date: '03 Aug 2023'
 ---
 ```
 
-Consider this sample:
-```md
-<!-- <place the format above here> -->
-
-## Lithium
-High-level programming language
-
-Lithium is a high-level, general purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation via the off-side rule.
-
-Lithium is statically typed and garbage-collected. [bn/Wiki](https://bn-wiki.vercel.app/Lithium)
-
-- *Developer:* Radiance E. Babajide
-- *Maintained by:* Tcitrogg Domain
-- *First appeared:* 28 August 2024, -1year to come
-- *OS:* Linux/Unix, Windows, MacOs, Android and more
-- *Paradigm:* Object-oriented, reflective
-- *Preview release:* 01.12.0b8 / 18 July 2023; 0 days ago
-- *Typing discipline:* Duck, static, strong typing
-
-### Syntax
-Here are some samples for the Reishi syntax
-
-```lit
-fx prompt(text:str) -> None{
-  print(text)
-}
-```
-
 ### Todo
 - [x] do Side info tab responsive design
 - [%] (%) Loading: we need to it look kind of like the real wiki with the way data is displayed
@@ -83,4 +55,4 @@ fx prompt(text:str) -> None{
 - [ ] add table of contents
 
 ---
-yours `tcitrogg/bnierimi`
+yours [`y/tcitrogg`](https://github.com/tcitrogg)

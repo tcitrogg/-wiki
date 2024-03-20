@@ -2,19 +2,19 @@
 title: Roadmap for this course
 description: Roadmap for the Python Engineering course.
 thumbnail: ""
-author: g/bnierimi
+author: y/tcitrogg
 contact:
   - https://bnierimi.vercel.app
-  - https://twitter.com/bnierimi
-  - https://instagram.com/bnierimi
-  - https://threads.net/@bnierimi
+  - https://twitter.com/tcitrogg
+  - https://instagram.com/tcitrogg
+  - https://threads.net/@tcitrogg
 published: true
 topics:
   - python
   - engineering
   - programming
   - course
-  - bnierimi
+  - tcitrogg
 date: '04 Aug 2023'
 ---
 
