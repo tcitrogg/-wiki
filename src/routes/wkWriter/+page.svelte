@@ -11,12 +11,12 @@ Type something...
 _yours kagayaki_`
 
   const handleChange = ()=>{
-    localStorage.setItem('bnierimiWriterContent', value);
+    localStorage.setItem('mkWikiWriterContent', value);
   }
   
   if (browser) {
-    if (localStorage.bnierimiWriterContent || (!("bnierimiWriterContent" in localStorage))) {
-      value = localStorage.bnierimiWriterContent
+    if (localStorage.mkWikiWriterContent || (!("mkWikiWriterContent" in localStorage))) {
+      value = localStorage.mkWikiWriterContent
 		}
 	}
 

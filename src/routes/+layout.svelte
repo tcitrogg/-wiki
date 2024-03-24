@@ -60,7 +60,7 @@
         <a href="https://bnierimi.vercel.app" data-tooltip-target={`side-nav-bar-4`} data-tooltip-placement="right" class={`${focusStyle} p-2 bg-zinc-300 dark:bg-zinc-800 opacity-70 hover:opacity-100 rounded`}>
           <i class={`icon icon-ic_fluent_person_20_regular flex text-2xl`}></i>
         </a>
-        <Tooltip title={"Bnierimi's Page"} id={"side-nav-bar-4"}/>
+        <Tooltip title={"tcitrogg's Page"} id={"side-nav-bar-4"}/>
       </div>
     </section>
   
