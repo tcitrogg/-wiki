@@ -1,3 +1,22 @@
+---
+title: 002 Resume Template
+description: A resume template.
+thumbnail: ""
+author: y/tcitrogg
+contact:
+  - https://bnierimi.vercel.app
+  - https://twitter.com/tcitrogg
+  - https://instagram.com/tcitrogg
+  - https://threads.net/@tcitrogg
+  - https://peerlist.io/tcitrogg
+published: true
+topics:
+  - resume
+  - cv
+  - tcitrogg
+date: '20 March 2024'
+---
+
 # Radiance Babajide
 
 ## Web Developer

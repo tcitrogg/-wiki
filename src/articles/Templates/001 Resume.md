@@ -8,6 +8,7 @@ contact:
   - https://twitter.com/tcitrogg
   - https://instagram.com/tcitrogg
   - https://threads.net/@tcitrogg
+  - https://peerlist.io/tcitrogg
 published: true
 topics:
   - resume
